@@ -32,7 +32,7 @@ var jobId             = substringBefore ( substringAfter ( job, '/jobs/' ), '/' 
 var heading           = '    Loggly queries for:   '++ (if (lower(mode) startsWith 'p') 'Production' else if (lower(mode) startsWith 't') 'Test' else '') ++'\n========================================\n'++'     Person:  '++ personId ++'\n' ++ '        Job:  '++ jobId ++'\n'++'   Employee:  '++ empId ++'\n'++'Correlation:  '++ corrId ++'\n'
 fun c()               = if(isBlank(corrId)) '' else (' AND "'++ corrId ++'"')
 fun p (arg1, arg2)    = '\n' ++ '   ' ++ arg1 ++ ':\n----------------------------------------\n' ++ (arg2 replace 'envt' with envt) ++ '\n'
-fun parr (arg1, arg2: Array<String>)    = '\n' ++ '   ' ++ arg1 ++ ':\n----------------------------------------\n' ++ ((arg2 joinBy '') replace 'envt' with envt) ++ '\n'
+fun parr (arg1, arg2: Array<String>)    = '\n' ++ '>   ' ++ arg1 ++ ':\n----------------------------------------\n' ++ ((arg2 joinBy '') replace 'envt' with envt) ++ '\n'
 fun pje ()            = do { if ( isBlank (empId) or ( sizeOf (empId) < 2 )) ('"'++ personId ++'" OR "'++ jobId ++'"') else ('"'++ personId ++'" OR "'++ jobId ++'" OR "'++ empId ++'"') }
 fun f(footer: String) = do {if (lower(se) startsWith 'n') '' else footer}
 ---

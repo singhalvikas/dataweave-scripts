@@ -1,0 +1,1535 @@
+{
+  // "hrEvent": {},
+  "hrEvent": {
+    "event": {
+      "header": {
+        "action": "create",
+        "eventType": "job.created",
+        "variables": {
+          "correlationId": "983d4cb0-41cd-11ef-96a7-0678da60ef79",
+          "derivedSAMAccountName": "HRISMichaelaTester.T",
+          "derivedUPN": "HRISMichaelaTester.T@mitre10.co.nz",
+          "existingSAMAccountName": "",
+          "existingUPN": "",
+          "attemptedDerivedUPN": [
+            "HRISMichaelaTester.T@mitre10.co.nz"
+          ],
+          "requestWebevent": {
+            "id": "19e37f6a-ff4c-4210-bb6b-2fc2b42e894a",
+            "event": "job.created",
+            "timestamp": "2024-07-14T10:41:10Z",
+            "links": {
+              "self": "https://api.intellihr.io/v1/jobs/19e37f6a-ff4c-4210-bb6b-2fc2b42e894a",
+              "selfEncoded": "https://api.intellihr.io/v1/jobs/19e37f6a-ff4c-4210-bb6b-2fc2b42e894a"
+            }
+          },
+          "finalTerminationDate": null,
+          "hasActiveConcurrentJobs": false,
+          "hasFutureJobs": false,
+          "hasUPNChanged": false,
+          "upnForADUpdate": "HRISMichaelaTester.T@mitre10.co.nz",
+          "samAccountForADUpdate": "HRISMichaelaTester.T",
+          "azureSearchResult": "CREATE_AD_RECORD",
+          "azureUserRecord": {
+            "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users(id,accountEnabled,displayName,givenName,surname,jobTitle,mail,mailNickname,userPrincipalName,proxyAddresses,department,city,country,employeeId,employeeType,companyName,creationType,identities,mobilePhone,businessPhones,officeLocation,manager,preferredLanguage,onPremisesImmutableId,createdDateTime,extension_4f02c106ff7d4aa682ff464449ae2c79_AccountType,extension_e032943b847647629d848d79dd0afdb6_employeeType,extension_e53ab3b6d1af48b6a4e3244836e55109_BusinessGroup,employeeHireDate,extension_935d0375507e49a79d978e077e247e61_PositionStartDate,extension_c878edcdcec448f0a9cfd6729bae1911_BusinessRole,extension_08f1a96952a1437ea2d656bc668ecda6_AddBusinessRole)",
+            "@odata.count": 0,
+            "value": []
+          },
+          "concurrentJobs": [],
+          "locations": [
+            {
+              "name": "Columbus Coffee Albany",
+              "sapSiteCode": "NA"
+            },
+            {
+              "name": "Columbus Coffee New Lynn",
+              "sapSiteCode": "NA"
+            },
+            {
+              "name": "Columbus Coffee Silverdale",
+              "sapSiteCode": "NA"
+            },
+            {
+              "name": "Columbus Coffee Warkworth",
+              "sapSiteCode": "NA"
+            },
+            {
+              "name": "Columbus Coffee Whangaparaoa",
+              "sapSiteCode": "NA"
+            },
+            {
+              "name": "Crofton Down Cafe",
+              "sapSiteCode": "NA"
+            },
+            {
+              "name": "Gisborne Cafe",
+              "sapSiteCode": "NA"
+            },
+            {
+              "name": "Greymouth Cafe",
+              "sapSiteCode": "NA"
+            },
+            {
+              "name": "Greymouth Truss Plant",
+              "sapSiteCode": "NA"
+            },
+            {
+              "name": "Grove Group Support Office",
+              "sapSiteCode": "NA"
+            },
+            {
+              "name": "Hamilton Support Centre",
+              "sapSiteCode": "N/A"
+            },
+            {
+              "name": "Henderson Cafe",
+              "sapSiteCode": "NA"
+            },
+            {
+              "name": "Hornby Cafe",
+              "sapSiteCode": "NA"
+            },
+            {
+              "name": "Invercargill Cafe",
+              "sapSiteCode": "NA"
+            },
+            {
+              "name": "Juted Truss Plant",
+              "sapSiteCode": "NA"
+            },
+            {
+              "name": "Kerikeri Cafe",
+              "sapSiteCode": "NA"
+            },
+            {
+              "name": "Levin columbus CafÃ©",
+              "sapSiteCode": null
+            },
+            {
+              "name": "Masterton Cafe",
+              "sapSiteCode": "NA"
+            },
+            {
+              "name": "Mitre 10 Alexandra",
+              "sapSiteCode": "5047"
+            },
+            {
+              "name": "Mitre 10 Beachlands",
+              "sapSiteCode": "5082"
+            },
+            {
+              "name": "Mitre 10 Beckenham",
+              "sapSiteCode": "5068"
+            },
+            {
+              "name": "Mitre 10 Browns Bay",
+              "sapSiteCode": "5067"
+            },
+            {
+              "name": "Mitre 10 Crofton Downs",
+              "sapSiteCode": "5046"
+            },
+            {
+              "name": "Mitre 10 Cromwell",
+              "sapSiteCode": "5060"
+            },
+            {
+              "name": "Mitre 10 Dannevirke",
+              "sapSiteCode": "5072"
+            },
+            {
+              "name": "Mitre 10 Feilding",
+              "sapSiteCode": "5041"
+            },
+            {
+              "name": "Mitre 10 Gisborne",
+              "sapSiteCode": "5083"
+            },
+            {
+              "name": "Mitre 10 Gore",
+              "sapSiteCode": "5045"
+            },
+            {
+              "name": "Mitre 10 Helensville",
+              "sapSiteCode": "5049"
+            },
+            {
+              "name": "Mitre 10 Hokitika",
+              "sapSiteCode": "5057"
+            },
+            {
+              "name": "Mitre 10 Kaitaia",
+              "sapSiteCode": "5051"
+            },
+            {
+              "name": "Mitre 10 Kerikeri",
+              "sapSiteCode": "5084"
+            },
+            {
+              "name": "Mitre 10 Levin",
+              "sapSiteCode": "5076"
+            },
+            {
+              "name": "Mitre 10 Martinborough",
+              "sapSiteCode": "5071"
+            },
+            {
+              "name": "Mitre 10 Marton",
+              "sapSiteCode": "5053"
+            },
+            {
+              "name": "Mitre 10 Matamata",
+              "sapSiteCode": "5073"
+            },
+            {
+              "name": "Mitre 10 MEGA Albany",
+              "sapSiteCode": "5035"
+            },
+            {
+              "name": "Mitre 10 MEGA Ashburton",
+              "sapSiteCode": "5011"
+            },
+            {
+              "name": "Mitre 10 MEGA Botany",
+              "sapSiteCode": "5014"
+            },
+            {
+              "name": "Mitre 10 MEGA Cambridge",
+              "sapSiteCode": "5020"
+            },
+            {
+              "name": "Mitre 10 MEGA Dunedin",
+              "sapSiteCode": "5007"
+            },
+            {
+              "name": "Mitre 10 MEGA Ferrymead",
+              "sapSiteCode": "5025"
+            },
+            {
+              "name": "Mitre 10 MEGA Ferrymead -Trade",
+              "sapSiteCode": "5025"
+            },
+            {
+              "name": "Mitre 10 MEGA Glenfield",
+              "sapSiteCode": "5009"
+            },
+            {
+              "name": "Mitre 10 MEGA Greymouth",
+              "sapSiteCode": "5026"
+            },
+            {
+              "name": "Mitre 10 MEGA Hastings",
+              "sapSiteCode": "5001"
+            },
+            {
+              "name": "Mitre 10 MEGA Henderson",
+              "sapSiteCode": "5002"
+            },
+            {
+              "name": "Mitre 10 MEGA Hornby",
+              "sapSiteCode": "5003"
+            },
+            {
+              "name": "Mitre 10 MEGA Invercargill",
+              "sapSiteCode": "5005"
+            },
+            {
+              "name": "Mitre 10 MEGA Kapiti",
+              "sapSiteCode": "5022"
+            },
+            {
+              "name": "Mitre 10 MEGA Manukau",
+              "sapSiteCode": "5027"
+            },
+            {
+              "name": "Mitre 10 MEGA Marlborough",
+              "sapSiteCode": "5015"
+            },
+            {
+              "name": "Mitre 10 MEGA Masterton",
+              "sapSiteCode": "5018"
+            },
+            {
+              "name": "Mitre 10 MEGA Mt Wellington",
+              "sapSiteCode": "5038"
+            },
+            {
+              "name": "Mitre 10 MEGA Napier",
+              "sapSiteCode": "5012"
+            },
+            {
+              "name": "Mitre 10 MEGA Nelson",
+              "sapSiteCode": "5010"
+            },
+            {
+              "name": "Mitre 10 MEGA New Lynn",
+              "sapSiteCode": "5028"
+            },
+            {
+              "name": "Mitre 10 MEGA New Plymouth",
+              "sapSiteCode": "5013"
+            },
+            {
+              "name": "Mitre 10 MEGA Oamaru",
+              "sapSiteCode": "5078"
+            },
+            {
+              "name": "Mitre 10 MEGA Palmerston North",
+              "sapSiteCode": "5033"
+            },
+            {
+              "name": "Mitre 10 MEGA Papanui",
+              "sapSiteCode": "5080"
+            },
+            {
+              "name": "Mitre 10 MEGA Petone",
+              "sapSiteCode": "5006"
+            },
+            {
+              "name": "Mitre 10 MEGA Porirua",
+              "sapSiteCode": "5030"
+            },
+            {
+              "name": "Mitre 10 MEGA Pukekohe",
+              "sapSiteCode": "5019"
+            },
+            {
+              "name": "Mitre 10 MEGA Queenstown",
+              "sapSiteCode": "5036"
+            },
+            {
+              "name": "Mitre 10 MEGA Rangiora",
+              "sapSiteCode": "5017"
+            },
+            {
+              "name": "Mitre 10 MEGA Rotorua",
+              "sapSiteCode": "5037"
+            },
+            {
+              "name": "Mitre 10 MEGA Royal Heights",
+              "sapSiteCode": null
+            },
+            {
+              "name": "Mitre 10 MEGA Ruakura",
+              "sapSiteCode": "5079"
+            },
+            {
+              "name": "Mitre 10 MEGA Silverdale",
+              "sapSiteCode": "5086"
+            },
+            {
+              "name": "Mitre 10 MEGA Takanini",
+              "sapSiteCode": "5031"
+            },
+            {
+              "name": "Mitre 10 MEGA Taupo",
+              "sapSiteCode": "5029"
+            },
+            {
+              "name": "Mitre 10 MEGA Tauranga",
+              "sapSiteCode": "5004"
+            },
+            {
+              "name": "Mitre 10 MEGA Te Awamutu",
+              "sapSiteCode": "5023"
+            },
+            {
+              "name": "Mitre 10 MEGA Te Rapa",
+              "sapSiteCode": "5008"
+            },
+            {
+              "name": "Mitre 10 MEGA Timaru",
+              "sapSiteCode": "5021"
+            },
+            {
+              "name": "Mitre 10 MEGA Upper Hutt",
+              "sapSiteCode": "5016"
+            },
+            {
+              "name": "Mitre 10 MEGA Wanaka",
+              "sapSiteCode": "5081"
+            },
+            {
+              "name": "Mitre 10 MEGA Wanganui",
+              "sapSiteCode": "5034"
+            },
+            {
+              "name": "Mitre 10 MEGA Warkworth",
+              "sapSiteCode": "5024"
+            },
+            {
+              "name": "Mitre 10 MEGA Westgate",
+              "sapSiteCode": "5032"
+            },
+            {
+              "name": "Mitre 10 MEGA Whangarei",
+              "sapSiteCode": "5039"
+            },
+            {
+              "name": "Mitre 10 Morrinsville",
+              "sapSiteCode": "5134"
+            },
+            {
+              "name": "Mitre 10 Mosgiel",
+              "sapSiteCode": "5048"
+            },
+            {
+              "name": "Mitre 10 Motueka",
+              "sapSiteCode": "5059"
+            },
+            {
+              "name": "Mitre 10 New Plymouth",
+              "sapSiteCode": "5040"
+            },
+            {
+              "name": "Mitre 10 Onehunga",
+              "sapSiteCode": "5043"
+            },
+            {
+              "name": "Mitre 10 Opotiki",
+              "sapSiteCode": "5075"
+            },
+            {
+              "name": "Mitre 10 Otorohanga",
+              "sapSiteCode": "5050"
+            },
+            {
+              "name": "Mitre 10 Pahiatua",
+              "sapSiteCode": "5055"
+            },
+            {
+              "name": "Mitre 10 Papamoa",
+              "sapSiteCode": "5061"
+            },
+            {
+              "name": "Mitre 10 Ponsonby",
+              "sapSiteCode": "5085"
+            },
+            {
+              "name": "Mitre 10 Stratford",
+              "sapSiteCode": "5052"
+            },
+            {
+              "name": "Mitre 10 Taumarunui",
+              "sapSiteCode": "5056"
+            },
+            {
+              "name": "Mitre 10 Te Anau",
+              "sapSiteCode": "5077"
+            },
+            {
+              "name": "Mitre 10 Te Kuiti",
+              "sapSiteCode": "5074"
+            },
+            {
+              "name": "Mitre 10 Te Puke",
+              "sapSiteCode": "5054"
+            },
+            {
+              "name": "Mitre 10 Thames",
+              "sapSiteCode": "5066"
+            },
+            {
+              "name": "Mitre 10 Waihi",
+              "sapSiteCode": "5044"
+            },
+            {
+              "name": "Mitre 10 Waipukurau",
+              "sapSiteCode": "5042"
+            },
+            {
+              "name": "Mitre 10 Waiuku",
+              "sapSiteCode": "5063"
+            },
+            {
+              "name": "Mitre 10 Westport",
+              "sapSiteCode": "5069"
+            },
+            {
+              "name": "Mitre 10 Whakatane",
+              "sapSiteCode": "5070"
+            },
+            {
+              "name": "Mitre 10 Whangaparaoa",
+              "sapSiteCode": "5062"
+            },
+            {
+              "name": "Mitre 10 Winton",
+              "sapSiteCode": "5064"
+            },
+            {
+              "name": "Nees Group Shared Services",
+              "sapSiteCode": "NA"
+            },
+            {
+              "name": "New Plymouth Cafe",
+              "sapSiteCode": "NA"
+            },
+            {
+              "name": "No Location",
+              "sapSiteCode": null
+            },
+            {
+              "name": "Papanui Cafe",
+              "sapSiteCode": "NA"
+            },
+            {
+              "name": "Riviera Prenail Truss Plant",
+              "sapSiteCode": "NA"
+            },
+            {
+              "name": "Riviera Shared Services",
+              "sapSiteCode": "NA"
+            },
+            {
+              "name": "St Aubyns Cafe",
+              "sapSiteCode": null
+            },
+            {
+              "name": "Support Centre",
+              "sapSiteCode": "4000"
+            },
+            {
+              "name": "Support Centre SOW Contractor",
+              "sapSiteCode": "4000"
+            },
+            {
+              "name": "Te Awamutu Cafe",
+              "sapSiteCode": "NA"
+            },
+            {
+              "name": "Wanganui Cafe",
+              "sapSiteCode": "NA"
+            },
+            {
+              "name": "Wanganui Frames & Truss Plant",
+              "sapSiteCode": "NA"
+            }
+          ],
+          "expectedStoreGroupNames": [
+            "Store-Code_CDE"
+          ]
+        }
+      },
+      "payload": {
+        "person": {
+          "meta": {
+            "requestId": "c4f30f43-b73f-4161-953c-00b5862a7781",
+            "asAt": "2024-07-14T10:41:21+00:00"
+          },
+          "data": {
+            "id": "f7b4f54c-eeb2-4093-9008-b69b97795c8d",
+            "displayName": "HRISMichaelaTester (Michaela) Tillman",
+            "firstName": "HRISMichaela",
+            "middleName": "Drew",
+            "lastName": "Tillman",
+            "preferredName": "HRISMichaelaTester",
+            "dateOfBirth": "1964-10-21",
+            "gender": "Other",
+            "isSupervisor": false,
+            "employeeNumber": null,
+            "autoIncrementIntellihrId": 721800,
+            "autoIncrementingIntellihrId": 721800,
+            "title": "Dr",
+            "medicalConditions": {},
+            "emailAddresses": [
+              {
+                "email": "MichaelaTillman@gmail.com",
+                "isPrimary": true,
+                "isPersonal": false,
+                "customFields": {
+                  "usage": {
+                    "definitionId": "6e0a4aef-64ab-43cb-b06d-34c868a76231",
+                    "name": "Usage",
+                    "type": "MULTI_SELECT",
+                    "value": {
+                      "ids": [
+                        "398de087-9916-4180-b1cc-bfb934d6aeff"
+                      ],
+                      "labels": [
+                        "Humanforce Mobile App"
+                      ]
+                    }
+                  }
+                }
+              }
+            ],
+            "emergencyContact": {
+              "name": "",
+              "relationship": "",
+              "phone": null,
+              "email": ""
+            },
+            "employmentStatus": "Current Staff",
+            "jobs": [
+              {
+                "id": "19e37f6a-ff4c-4210-bb6b-2fc2b42e894a",
+                "name": "Commerce Cloud Test Analyst",
+                "startDate": "2024-04-04T12:00:00+00:00",
+                "endDate": null,
+                "jobStatus": "Current Job",
+                "isOnExtendedLeave": false,
+                "isPrimaryJob": true,
+                "link": "https://api.intellihr.io/v1/jobs/19e37f6a-ff4c-4210-bb6b-2fc2b42e894a"
+              }
+            ],
+            "workRights": {
+              "name": "Permanent Resident Visa (NZ Permanent Resident)",
+              "country": "New Zealand",
+              "expirationDate": null
+            },
+            "primaryEmailAddress": {
+              "email": "MichaelaTillman@gmail.com",
+              "isPersonal": false
+            },
+            "primaryPhoneNumber": {
+              "number": "0212029819",
+              "fullNumber": "+64 212029819",
+              "isPersonal": false
+            },
+            "addresses": [
+              {
+                "addressType": "Home",
+                "fullAddress": "12 Oriana Avenue, Lynfield, Auckland",
+                "country": "New Zealand",
+                "postcode": "1042",
+                "state": "Auckland",
+                "street": "12 Oriana Avenue",
+                "suburb": "Lynfield",
+                "isPrimary": true,
+                "customFields": {}
+              }
+            ],
+            "phoneNumbers": [
+              {
+                "number": "0212029819",
+                "fullNumber": "+64 212029819",
+                "isPrimary": true,
+                "isPersonal": false,
+                "customFields": {
+                  "type": {
+                    "definitionId": "e5df40c5-66b3-42ac-9131-3b4931f7827e",
+                    "name": "Type",
+                    "type": "SINGLE_SELECT",
+                    "value": {
+                      "id": "a81caa95-f9fe-47c4-9ef5-79d01e8e388c",
+                      "label": "Mobile"
+                    }
+                  }
+                }
+              },
+              {
+                "number": "0215163189",
+                "fullNumber": "+64 215163189",
+                "isPrimary": false,
+                "isPersonal": true,
+                "customFields": {
+                  "type": {
+                    "definitionId": "e5df40c5-66b3-42ac-9131-3b4931f7827e",
+                    "name": "Type",
+                    "type": "SINGLE_SELECT",
+                    "value": {
+                      "id": "a81caa95-f9fe-47c4-9ef5-79d01e8e388c",
+                      "label": "Mobile"
+                    }
+                  }
+                }
+              }
+            ],
+            "userAccount": null,
+            "customFields": {},
+            "createdAt": "2024-07-14T10:40:48+00:00",
+            "updatedAt": "2024-07-14T10:41:09+00:00"
+          }
+        },
+        "job": {
+          "meta": {
+            "requestId": "d0e5df3c-0509-455e-b2f6-677665c03956",
+            "asAt": "2024-07-14T10:41:15+00:00"
+          },
+          "data": {
+            "id": "19e37f6a-ff4c-4210-bb6b-2fc2b42e894a",
+            "positionTitle": {
+              "id": "db6ed398-b51a-4cd6-a82f-c54c2ebc825b",
+              "name": "Commerce Cloud Test Analyst",
+              "code": "1540"
+            },
+            "person": {
+              "id": "f7b4f54c-eeb2-4093-9008-b69b97795c8d",
+              "displayName": "HRISMichaelaTester (Michaela) Tillman",
+              "employeeNumber": null,
+              "autoIncrementIntellihrId": 721800,
+              "autoIncrementingIntellihrId": 721800,
+              "link": "https://api.intellihr.io/v1/people/f7b4f54c-eeb2-4093-9008-b69b97795c8d"
+            },
+            "recruitment": {
+              "cost": 0,
+              "currency": "NZD",
+              "source": null
+            },
+            "extendedLeave": null,
+            "location": {
+              "id": "dabb58e9-9ffb-4526-9fe3-f25b5e6945c7",
+              "name": "Support Centre",
+              "address": "67 Corinthian Drive, Albany, 0632, Auckland, New Zealand",
+              "code": "4000",
+              "link": "https://api.intellihr.io/v1/locations/dabb58e9-9ffb-4526-9fe3-f25b5e6945c7",
+              "customFields": {
+                "create_intelli_hr_account": {
+                  "definitionId": "3e4a2897-f158-412e-a0bb-4b1ee296362c",
+                  "name": "Create IntelliHR Account",
+                  "type": "SINGLE_SELECT",
+                  "value": {
+                    "id": "279926ed-de07-4d1d-8eb3-f8a32b9bec3b",
+                    "label": "No"
+                  }
+                },
+                "create_mitre_10_identity": {
+                  "definitionId": "5336d624-f166-475e-8d66-4f8ff1c1d5e8",
+                  "name": "Create Mitre10 Identity",
+                  "type": "SINGLE_SELECT",
+                  "value": {
+                    "id": "5d2ed317-3771-446a-bbeb-593dbed9465c",
+                    "label": "Yes"
+                  }
+                },
+                "email_domain": {
+                  "definitionId": "8624d79f-4005-489c-a5c6-3036e15ac9b4",
+                  "name": "Email Domain",
+                  "type": "SINGLE_SELECT",
+                  "value": {
+                    "id": "8d961fc4-9ad2-43c5-89c1-17ba349fa6d6",
+                    "label": "mitre10.co.nz"
+                  }
+                },
+                "human_force_pay_company_export_code": {
+                  "definitionId": "23e15be4-c0f6-454e-8346-8806e7e13318",
+                  "name": "Human Force Pay Company Export Code",
+                  "type": "TEXT",
+                  "value": "NA"
+                },
+                "location_type": {
+                  "definitionId": "f5d9706c-323b-41a4-9198-d36a2e3b37ca",
+                  "name": "Location Type",
+                  "type": "SINGLE_SELECT",
+                  "value": {
+                    "id": "e93cd0a1-4f3e-4fbb-a950-4cbf289ca039",
+                    "label": "Support Centre"
+                  }
+                },
+                "pay_period_code": {
+                  "definitionId": "8f2f99a9-eed0-4b78-8594-e817f8ac80e5",
+                  "name": "Pay Period Code",
+                  "type": "TEXT",
+                  "value": "SCMTH"
+                },
+                "payroll_type": {
+                  "definitionId": "917f4833-fc6e-4437-bdc2-5499cd7523f2",
+                  "name": "Payroll Type",
+                  "type": "SINGLE_SELECT",
+                  "value": {
+                    "id": "3818ee4f-6c97-4710-aa24-b07e00b37400",
+                    "label": "Support Centre PG"
+                  }
+                },
+                "rbp_region_id": {
+                  "definitionId": "c51de6af-391d-45b8-9943-8b361c5e6a06",
+                  "name": "RBP Region ID",
+                  "type": "SINGLE_SELECT",
+                  "value": {
+                    "id": "edaffc4c-b27c-4c94-b4e2-957a4298b1f2",
+                    "label": "NA"
+                  }
+                },
+                "sap_site_code": {
+                  "definitionId": "d2e460a6-b6dd-43a2-977d-c19b1d476f3b",
+                  "name": "SAP Site Code",
+                  "type": "TEXT",
+                  "value": "4000"
+                },
+                "store_hr_representative": {
+                  "definitionId": "c36c1ac4-048c-48e9-8294-d0c9f6bd777f",
+                  "name": "Store HR Representative",
+                  "type": "TEXT",
+                  "value": "HRISSupport+SCHR@mitre10.co.nz"
+                },
+                "store_it_representative": {
+                  "definitionId": "72d5eb6c-42ba-43fe-b810-aba8bc40a98d",
+                  "name": "Store IT Representative",
+                  "type": "TEXT",
+                  "value": "HRISSupport+SCIT@mitre10.co.nz"
+                },
+                "trm_code": {
+                  "definitionId": "cfe75efe-060c-40f8-bc1a-6afd5890c99d",
+                  "name": "TRM code",
+                  "type": "TEXT",
+                  "value": "CDE"
+                }
+              }
+            },
+            "payGrade": {},
+            "businessUnit": {
+              "id": "76b25896-7d48-4e29-bc72-aa0467e1836d",
+              "name": "Test & Quality",
+              "code": "",
+              "link": "https://api.intellihr.io/v1/business-units/76b25896-7d48-4e29-bc72-aa0467e1836d",
+              "customFields": {
+                "business_unit_code": {
+                  "definitionId": "f3e180cf-b239-496b-ac1a-7c9ef8a6b37a",
+                  "name": "Business Unit Code",
+                  "type": "TEXT",
+                  "value": "541"
+                },
+                "cost_centre_code": {
+                  "definitionId": "6f791be1-69a1-48f8-aaef-efcf1ff16380",
+                  "name": "Cost Centre Code",
+                  "type": "TEXT",
+                  "value": "11002105"
+                },
+                "organisation_level": {
+                  "definitionId": "5259b598-6ba6-4d1b-afc4-f9cb86a286d3",
+                  "name": "Organisation  Level",
+                  "type": "SINGLE_SELECT",
+                  "value": {
+                    "id": "ce208833-4ae4-4571-a5b1-5b06b623a043",
+                    "label": "Team"
+                  }
+                }
+              }
+            },
+            "businessEntity": {
+              "id": "2f91bc23-7877-4e93-b8cc-2cdbf34d42cf",
+              "name": "Mitre 10 (New Zealand) Ltd",
+              "code": "1100",
+              "link": "https://api.intellihr.io/v1/business-entities/2f91bc23-7877-4e93-b8cc-2cdbf34d42cf",
+              "customFields": {}
+            },
+            "establishment": {
+              "id": "3d3edfda-9e8d-4655-91bc-8a6d1fc1d0c5",
+              "name": "No Assigned Roles",
+              "link": "https://api.intellihr.io/v1/establishments/3d3edfda-9e8d-4655-91bc-8a6d1fc1d0c5"
+            },
+            "supervisorJob": {
+              "id": "56510c58-ce8d-4819-9016-dc17a029d1f4",
+              "jobStatus": "Current Job",
+              "name": "Quality & Test Manager",
+              "link": "https://api.intellihr.io/v1/jobs/56510c58-ce8d-4819-9016-dc17a029d1f4",
+              "positionTitle": {
+                "id": "8461bc85-94df-4973-b874-d9cb42c99a1c",
+                "name": "Quality & Test Manager",
+                "code": "1151"
+              }
+            },
+            "supervisorPerson": {
+              "id": "f2c21359-58c4-4b29-944f-fe798b23a69c",
+              "displayName": "LynnePrem (Lynne) Chalmers",
+              "employeeNumber": "11017",
+              "autoIncrementIntellihrId": 703329,
+              "autoIncrementingIntellihrId": 703329,
+              "link": "https://api.intellihr.io/v1/people/f2c21359-58c4-4b29-944f-fe798b23a69c"
+            },
+            "employmentCondition": {
+              "id": "62b697c7-72a8-42e9-b0ec-47e63fd59969",
+              "startDate": null,
+              "endDate": null,
+              "name": "No Employment Condition",
+              "awardName": null,
+              "link": "https://api.intellihr.io/v1/employment-conditions/62b697c7-72a8-42e9-b0ec-47e63fd59969"
+            },
+            "remunerationSchedule": {},
+            "customFields": {},
+            "comments": [],
+            "lastestJobChangeComment": null,
+            "workClass": "SC Permanent - F/T",
+            "workType": "Permanent",
+            "isPrimaryJob": true,
+            "jobStatus": "Current Job",
+            "name": "Commerce Cloud Test Analyst",
+            "fte": 1,
+            "positionStartDate": "2024-04-04T12:00:00+00:00",
+            "companyStartDate": "2024-04-04T12:00:00+00:00",
+            "createdBy": {
+              "id": "a33377b3-45f6-430b-861a-55bb3e13a6d5",
+              "link": "https://api.intellihr.io/v1/users/a33377b3-45f6-430b-861a-55bb3e13a6d5"
+            },
+            "updatedBy": {
+              "id": "a33377b3-45f6-430b-861a-55bb3e13a6d5",
+              "link": "https://api.intellihr.io/v1/users/a33377b3-45f6-430b-861a-55bb3e13a6d5"
+            },
+            "startDate": "2024-04-04T12:00:00+00:00",
+            "companyEndDate": null,
+            "endDate": null,
+            "isEndDateConfirmed": false,
+            "turnoverType": null,
+            "turnoverReason": null,
+            "createdAt": "2024-07-14T10:41:08+00:00"
+          },
+          "timeline": {},
+          "m10": {
+            "team": {
+              "meta": {
+                "requestId": "c98325a1-c6c1-4797-af2d-2a967f7cf73b",
+                "asAt": "2024-07-14T10:41:32+00:00"
+              },
+              "data": {
+                "id": "76b25896-7d48-4e29-bc72-aa0467e1836d",
+                "identifier": "",
+                "name": "Test & Quality",
+                "code": "",
+                "notes": "",
+                "parentId": "fe254cce-0342-4a09-83af-67a6d035d8c3",
+                "isEnabled": true,
+                "customFields": {
+                  "business_unit_code": {
+                    "definitionId": "f3e180cf-b239-496b-ac1a-7c9ef8a6b37a",
+                    "name": "Business Unit Code",
+                    "type": "TEXT",
+                    "value": "541"
+                  },
+                  "cost_centre_code": {
+                    "definitionId": "6f791be1-69a1-48f8-aaef-efcf1ff16380",
+                    "name": "Cost Centre Code",
+                    "type": "TEXT",
+                    "value": "11002105"
+                  },
+                  "organisation_level": {
+                    "definitionId": "5259b598-6ba6-4d1b-afc4-f9cb86a286d3",
+                    "name": "Organisation  Level",
+                    "type": "SINGLE_SELECT",
+                    "value": {
+                      "id": "ce208833-4ae4-4571-a5b1-5b06b623a043",
+                      "label": "Team"
+                    }
+                  }
+                }
+              }
+            },
+            "subDepartment": {
+              "meta": {
+                "requestId": "cf869cd7-81a1-4a37-bbea-9ff7944ff398",
+                "asAt": "2024-07-14T10:41:33+00:00"
+              },
+              "data": {
+                "id": "fe254cce-0342-4a09-83af-67a6d035d8c3",
+                "identifier": "",
+                "name": "ICT Operations",
+                "code": "",
+                "notes": "",
+                "parentId": "ebbd1c0a-425d-48a8-a505-e77437768650",
+                "isEnabled": true,
+                "customFields": {
+                  "business_unit_code": {
+                    "definitionId": "f3e180cf-b239-496b-ac1a-7c9ef8a6b37a",
+                    "name": "Business Unit Code",
+                    "type": "TEXT",
+                    "value": "53"
+                  },
+                  "cost_centre_code": {
+                    "definitionId": "6f791be1-69a1-48f8-aaef-efcf1ff16380",
+                    "name": "Cost Centre Code",
+                    "type": "TEXT",
+                    "value": "NA"
+                  },
+                  "organisation_level": {
+                    "definitionId": "5259b598-6ba6-4d1b-afc4-f9cb86a286d3",
+                    "name": "Organisation  Level",
+                    "type": "SINGLE_SELECT",
+                    "value": {
+                      "id": "7ae1a5bb-e19b-4b58-838d-0b2e73ddf313",
+                      "label": "Sub-department"
+                    }
+                  }
+                }
+              }
+            },
+            "department": {
+              "meta": {
+                "requestId": "945e6b29-04f3-453c-aab7-33b19855339e",
+                "asAt": "2024-07-14T10:41:34+00:00"
+              },
+              "data": {
+                "id": "ebbd1c0a-425d-48a8-a505-e77437768650",
+                "identifier": "",
+                "name": "Information Technology",
+                "code": "",
+                "notes": "",
+                "parentId": "7aebc78d-03c3-4234-b7f4-0b7c8f80b9e6",
+                "isEnabled": true,
+                "customFields": {
+                  "business_unit_code": {
+                    "definitionId": "f3e180cf-b239-496b-ac1a-7c9ef8a6b37a",
+                    "name": "Business Unit Code",
+                    "type": "TEXT",
+                    "value": "50"
+                  },
+                  "cost_centre_code": {
+                    "definitionId": "6f791be1-69a1-48f8-aaef-efcf1ff16380",
+                    "name": "Cost Centre Code",
+                    "type": "TEXT",
+                    "value": "NA"
+                  },
+                  "organisation_level": {
+                    "definitionId": "5259b598-6ba6-4d1b-afc4-f9cb86a286d3",
+                    "name": "Organisation  Level",
+                    "type": "SINGLE_SELECT",
+                    "value": {
+                      "id": "f24e570d-a2ac-4baa-9577-e5ebdef4b8b8",
+                      "label": "Department"
+                    }
+                  }
+                }
+              }
+            },
+            "wap": "150535411201",
+            "orgPosition": "50535411201",
+            "locationType": "SUPPORT_CENTRE",
+            "businessEntityCode": "1100",
+            "locationCode": "4000"
+          }
+        },
+        "jobs": [
+          {
+            "meta": {
+              "requestId": "6f446215-2acb-44f4-8fd9-8610226da56c",
+              "asAt": "2024-07-14T10:41:21+00:00"
+            },
+            "data": {
+              "id": "19e37f6a-ff4c-4210-bb6b-2fc2b42e894a",
+              "positionTitle": {
+                "id": "db6ed398-b51a-4cd6-a82f-c54c2ebc825b",
+                "name": "Commerce Cloud Test Analyst",
+                "code": "1540"
+              },
+              "person": {
+                "id": "f7b4f54c-eeb2-4093-9008-b69b97795c8d",
+                "displayName": "MichaelaTester (Michaela) Tillman",
+                "employeeNumber": null,
+                "autoIncrementIntellihrId": 721800,
+                "autoIncrementingIntellihrId": 721800,
+                "link": "https://api.intellihr.io/v1/people/f7b4f54c-eeb2-4093-9008-b69b97795c8d"
+              },
+              "recruitment": {
+                "cost": 0,
+                "currency": "NZD",
+                "source": null
+              },
+              "extendedLeave": null,
+              "location": {
+                "id": "dabb58e9-9ffb-4526-9fe3-f25b5e6945c7",
+                "name": "Support Centre",
+                "address": "67 Corinthian Drive, Albany, 0632, Auckland, New Zealand",
+                "code": "4000",
+                "link": "https://api.intellihr.io/v1/locations/dabb58e9-9ffb-4526-9fe3-f25b5e6945c7",
+                "customFields": {
+                  "create_intelli_hr_account": {
+                    "definitionId": "3e4a2897-f158-412e-a0bb-4b1ee296362c",
+                    "name": "Create IntelliHR Account",
+                    "type": "SINGLE_SELECT",
+                    "value": {
+                      "id": "279926ed-de07-4d1d-8eb3-f8a32b9bec3b",
+                      "label": "No"
+                    }
+                  },
+                  "create_mitre_10_identity": {
+                    "definitionId": "5336d624-f166-475e-8d66-4f8ff1c1d5e8",
+                    "name": "Create Mitre10 Identity",
+                    "type": "SINGLE_SELECT",
+                    "value": {
+                      "id": "5d2ed317-3771-446a-bbeb-593dbed9465c",
+                      "label": "Yes"
+                    }
+                  },
+                  "email_domain": {
+                    "definitionId": "8624d79f-4005-489c-a5c6-3036e15ac9b4",
+                    "name": "Email Domain",
+                    "type": "SINGLE_SELECT",
+                    "value": {
+                      "id": "8d961fc4-9ad2-43c5-89c1-17ba349fa6d6",
+                      "label": "mitre10.co.nz"
+                    }
+                  },
+                  "human_force_pay_company_export_code": {
+                    "definitionId": "23e15be4-c0f6-454e-8346-8806e7e13318",
+                    "name": "Human Force Pay Company Export Code",
+                    "type": "TEXT",
+                    "value": "NA"
+                  },
+                  "location_type": {
+                    "definitionId": "f5d9706c-323b-41a4-9198-d36a2e3b37ca",
+                    "name": "Location Type",
+                    "type": "SINGLE_SELECT",
+                    "value": {
+                      "id": "e93cd0a1-4f3e-4fbb-a950-4cbf289ca039",
+                      "label": "Support Centre"
+                    }
+                  },
+                  "pay_period_code": {
+                    "definitionId": "8f2f99a9-eed0-4b78-8594-e817f8ac80e5",
+                    "name": "Pay Period Code",
+                    "type": "TEXT",
+                    "value": "SCMTH"
+                  },
+                  "payroll_type": {
+                    "definitionId": "917f4833-fc6e-4437-bdc2-5499cd7523f2",
+                    "name": "Payroll Type",
+                    "type": "SINGLE_SELECT",
+                    "value": {
+                      "id": "3818ee4f-6c97-4710-aa24-b07e00b37400",
+                      "label": "Support Centre PG"
+                    }
+                  },
+                  "rbp_region_id": {
+                    "definitionId": "c51de6af-391d-45b8-9943-8b361c5e6a06",
+                    "name": "RBP Region ID",
+                    "type": "SINGLE_SELECT",
+                    "value": {
+                      "id": "edaffc4c-b27c-4c94-b4e2-957a4298b1f2",
+                      "label": "NA"
+                    }
+                  },
+                  "sap_site_code": {
+                    "definitionId": "d2e460a6-b6dd-43a2-977d-c19b1d476f3b",
+                    "name": "SAP Site Code",
+                    "type": "TEXT",
+                    "value": "4000"
+                  },
+                  "store_hr_representative": {
+                    "definitionId": "c36c1ac4-048c-48e9-8294-d0c9f6bd777f",
+                    "name": "Store HR Representative",
+                    "type": "TEXT",
+                    "value": "HRISSupport+SCHR@mitre10.co.nz"
+                  },
+                  "store_it_representative": {
+                    "definitionId": "72d5eb6c-42ba-43fe-b810-aba8bc40a98d",
+                    "name": "Store IT Representative",
+                    "type": "TEXT",
+                    "value": "HRISSupport+SCIT@mitre10.co.nz"
+                  },
+                  "trm_code": {
+                    "definitionId": "cfe75efe-060c-40f8-bc1a-6afd5890c99d",
+                    "name": "TRM code",
+                    "type": "TEXT",
+                    "value": "CDE"
+                  }
+                }
+              },
+              "payGrade": {
+                "id": "e5049d4d-b0a6-4efd-ba4a-c9a68277f913",
+                "name": "No Pay Grade",
+                "code": "N/A",
+                "payStep": null,
+                "link": "https://api.intellihr.io/v1/pay-grades/e5049d4d-b0a6-4efd-ba4a-c9a68277f913"
+              },
+              "businessUnit": {
+                "id": "76b25896-7d48-4e29-bc72-aa0467e1836d",
+                "name": "Test & Quality",
+                "code": "",
+                "link": "https://api.intellihr.io/v1/business-units/76b25896-7d48-4e29-bc72-aa0467e1836d",
+                "customFields": {
+                  "business_unit_code": {
+                    "definitionId": "f3e180cf-b239-496b-ac1a-7c9ef8a6b37a",
+                    "name": "Business Unit Code",
+                    "type": "TEXT",
+                    "value": "541"
+                  },
+                  "cost_centre_code": {
+                    "definitionId": "6f791be1-69a1-48f8-aaef-efcf1ff16380",
+                    "name": "Cost Centre Code",
+                    "type": "TEXT",
+                    "value": "11002105"
+                  },
+                  "organisation_level": {
+                    "definitionId": "5259b598-6ba6-4d1b-afc4-f9cb86a286d3",
+                    "name": "Organisation  Level",
+                    "type": "SINGLE_SELECT",
+                    "value": {
+                      "id": "ce208833-4ae4-4571-a5b1-5b06b623a043",
+                      "label": "Team"
+                    }
+                  }
+                }
+              },
+              "businessEntity": {
+                "id": "2f91bc23-7877-4e93-b8cc-2cdbf34d42cf",
+                "name": "Mitre 10 (New Zealand) Ltd",
+                "code": "1100",
+                "link": "https://api.intellihr.io/v1/business-entities/2f91bc23-7877-4e93-b8cc-2cdbf34d42cf",
+                "customFields": {
+                  "store_groups": {
+                    "definitionId": "b1b02485-eb4a-4c1e-b6c6-5b770e488399",
+                    "name": "Store groups",
+                    "type": "MULTI_SELECT",
+                    "value": {
+                      "ids": [
+                        "003b1dc8-c6c7-425d-9f9e-7c9549499cbe",
+                        "020ee2ec-e1e3-4a20-b201-25f0b010ac15",
+                        "04da9151-feca-4d49-953b-b578bec70921",
+                        "05f3d745-1b20-4be5-b902-45cc08804975",
+                        "06f97840-a9d4-4016-8ab2-c20ba19cba53",
+                        "09c97102-80d8-4aa6-ae30-dc5f343d1210",
+                        "0f2e5d70-33e8-4402-9d67-928d2c4f9abe",
+                        "1126cc1e-f4b0-4c58-92cd-6709bdc30fb5",
+                        "1d329b2f-6565-41d9-a04f-e5ac942f1f21",
+                        "1f0420ba-ffe8-423a-b369-4d5730c04868",
+                        "24675d83-7fc9-4c47-99ff-c729f3309c19",
+                        "253fee76-1181-4d56-816a-8a4acb4a5990",
+                        "266522f4-fdb4-4a12-a2b1-ceda8331c43b",
+                        "2ef9aff5-2bfe-467b-ad19-bdc859633aa1",
+                        "358491da-4e39-4711-a960-2712e83a784c",
+                        "39198f35-4f56-4153-9157-d8365236be73",
+                        "39ee9a77-a824-4bd1-918a-61a533abcb7f",
+                        "3b143ef1-9105-42fa-aad8-e5fa38b9b3d3",
+                        "4034d7c7-7460-4cdb-b0d1-d16b655112e7",
+                        "41e0a10c-d59f-45ed-92a1-79ac4c8f6722",
+                        "4514e3a1-e84f-4e05-b073-e3a69db3eda2",
+                        "49fd0179-14af-4493-aa3e-d3f3faed5ab1",
+                        "4a4ff454-5f7a-4927-871f-4d723b002473",
+                        "4f0953c3-5a13-44f9-bca7-5408a6bb42d9",
+                        "50b82e45-97e6-476d-a139-d719e0a8b5e0",
+                        "530a98e5-3a13-421a-8ca7-768c58b4a6ae",
+                        "53d638a2-97f1-4b08-a22e-3cae4b391d5c",
+                        "5428b13d-5eb3-4d47-9e0b-9e9f144f1a73",
+                        "55f4596e-8bad-4172-b437-01b490ddc66f",
+                        "56d14e1d-dd24-4c99-898e-0471b414df44",
+                        "5aa7424a-ea19-45bb-ae6d-9e0909512715",
+                        "5c1c3252-7755-47ea-a809-455841056399",
+                        "6434771d-713a-4313-b476-3985b4fd370b",
+                        "6730ad11-37cc-4a42-9048-1a717fe36f1d",
+                        "692d22fb-d517-453e-b2b9-a3e081c87786",
+                        "697bc1b8-be6b-47d9-8c3d-cf531787a708",
+                        "73618d5e-0e7f-40f2-ba85-83e10f5e53ab",
+                        "7f19e488-dba0-4404-8324-5d5ee9ac49ce",
+                        "82c119d2-c421-4339-bdc8-eba0baf87b4c",
+                        "82c4c708-1b75-4cf2-87ba-95045f980ae6",
+                        "8387b57f-a354-4e71-8022-4ed1c45590bf",
+                        "8431d01e-6efd-44ad-8a72-fe756badb882",
+                        "8527134b-e989-4992-b889-3e7ee20cbb78",
+                        "90bbab21-62b2-4082-876a-12f5c49125e5",
+                        "929d9e89-7dd1-42e6-bede-ef58eedd94f5",
+                        "92e356c2-5370-4a31-b8b6-316b47015838",
+                        "94142b6b-d3da-4ec5-bf43-fe4b1ae11180",
+                        "9453cfd3-3149-494e-b295-773797e9f09a",
+                        "983bc5bd-f88c-41cb-b9c4-4e6d67f901c2",
+                        "99641d4b-452d-4c0c-8e0c-61d780de5d26",
+                        "9ab57a09-3062-4ef3-a403-84837be8c14a",
+                        "9afe15bc-ca80-4c62-9d46-fb721252f569",
+                        "9ca519bc-4fad-49fb-9e2a-e7db557e4e29",
+                        "a19ffd21-9035-4827-b157-ae3725b6a057",
+                        "a2458a0c-63ea-468e-a78b-79e4be5a048e",
+                        "a5c3a261-9baf-41fb-a295-3a602314768f",
+                        "a60b096e-4e4d-4311-a934-4c883426c759",
+                        "a61c53ad-e955-4417-a1e4-896987a059cb",
+                        "a915ac51-eabb-4daf-acc3-559c042005f0",
+                        "acb0d835-b910-464a-9ed6-f8ebdfbcbec5",
+                        "ae810bfc-2e20-4557-b0af-c61c47a4d934",
+                        "afdb0fb2-b4b2-4cc1-a000-90ef4e4623f6",
+                        "b64ffd7a-a366-42e4-a2ea-5e4c972adb48",
+                        "b763f915-75a4-4e98-a418-0fb2b38ad66d",
+                        "ba66ac6d-782c-4312-8462-4a65e468179c",
+                        "be37f6b1-a4e3-4bc6-aaad-5ed939578237",
+                        "c57aa8c1-9d37-4f45-a8f4-eaa32f40ae22",
+                        "c62c3dbe-1f8e-43b5-b287-cc7fd52ed4d3",
+                        "c984f41a-3827-424b-b551-d74d373a457b",
+                        "c986e7fd-fbaa-43b4-8aa6-3061fe33ded3",
+                        "cd907353-6b82-47fe-bcb1-c8dc85137510",
+                        "ce9c8c9e-a439-4da4-8e74-317e93ccea45",
+                        "cf131fb7-ad21-4ebd-8e46-a1c8737a896b",
+                        "d1d53f67-c452-4613-8d9b-80f15a524e72",
+                        "d68791ec-538c-4c2b-ba28-acecc00a8b66",
+                        "d7e029b5-a7be-4745-aba8-426d6ecf8bf9",
+                        "e6e74906-dc90-4d76-b9de-76857bbf97be",
+                        "e7f8d935-7e61-4759-af1e-a16566c0d9b3",
+                        "e8a90741-541a-49b6-9b70-1f9bf1df737b",
+                        "eb59c02a-939e-48aa-b8b3-3a76c22a0a0e",
+                        "ebdc38ff-927c-46fb-b03b-b034b70dc361",
+                        "ed079f16-c872-495b-b2a3-29ae3f053505",
+                        "eda6b83e-58cb-4523-8bc9-56bc339a614c",
+                        "f45e2f7d-b019-4dd2-96ac-a33c7c694332",
+                        "f4c2dd03-180c-4bda-8954-1ecdd39fbc6e",
+                        "f90a237f-c387-4851-a99f-383cfb292b71",
+                        "fab76b82-1528-4b59-a47f-b07912e4d365"
+                      ],
+                      "labels": [
+                        "Mitre 10 Alexandra",
+                        "Mitre 10 Beachlands",
+                        "Mitre 10 Beckenham",
+                        "Mitre 10 Browns Bay",
+                        "Mitre 10 Crofton Downs",
+                        "Mitre 10 Cromwell",
+                        "Mitre 10 Dannevirke",
+                        "Mitre 10 Feilding",
+                        "Mitre 10 Gisborne",
+                        "Mitre 10 Gore",
+                        "Mitre 10 Helensville",
+                        "Mitre 10 Hokitika",
+                        "Mitre 10 Kaitaia",
+                        "Mitre 10 Kerikeri",
+                        "Mitre 10 Martinborough",
+                        "Mitre 10 Marton",
+                        "Mitre 10 Matamata",
+                        "Mitre 10 MEGA Albany",
+                        "Mitre 10 MEGA Ashburton",
+                        "Mitre 10 MEGA Botany",
+                        "Mitre 10 MEGA Cambridge",
+                        "Mitre 10 MEGA Dunedin",
+                        "Mitre 10 MEGA Ferrymead",
+                        "Mitre 10 MEGA Glenfield",
+                        "Mitre 10 MEGA Greymouth",
+                        "Mitre 10 MEGA Hastings",
+                        "Mitre 10 MEGA Henderson",
+                        "Mitre 10 MEGA Hornby",
+                        "Mitre 10 MEGA Invercargill",
+                        "Mitre 10 MEGA Kapiti",
+                        "Mitre 10 MEGA Manukau",
+                        "Mitre 10 MEGA Marlborough",
+                        "Mitre 10 MEGA Masterton",
+                        "Mitre 10 MEGA Mt Wellington",
+                        "Mitre 10 MEGA Napier",
+                        "Mitre 10 MEGA Nelson",
+                        "Mitre 10 MEGA New Lynn",
+                        "Mitre 10 MEGA New Plymouth",
+                        "Mitre 10 MEGA Oamaru",
+                        "Mitre 10 MEGA Palmerston North",
+                        "Mitre 10 MEGA Papanui",
+                        "Mitre 10 MEGA Petone",
+                        "Mitre 10 MEGA Porirua",
+                        "Mitre 10 MEGA Pukekohe",
+                        "Mitre 10 MEGA Queenstown",
+                        "Mitre 10 MEGA Rangiora",
+                        "Mitre 10 MEGA Rotorua",
+                        "Mitre 10 MEGA Ruakura",
+                        "Mitre 10 MEGA Silverdale",
+                        "Mitre 10 MEGA Takanini",
+                        "Mitre 10 MEGA Taupo",
+                        "Mitre 10 MEGA Tauranga",
+                        "Mitre 10 MEGA Te Awamutu",
+                        "Mitre 10 MEGA Te Rapa",
+                        "Mitre 10 MEGA Timaru",
+                        "Mitre 10 MEGA Upper Hutt",
+                        "Mitre 10 MEGA Wanaka",
+                        "Mitre 10 MEGA Warkworth",
+                        "Mitre 10 MEGA Westgate",
+                        "Mitre 10 MEGA Whangarei",
+                        "Mitre 10 Morrinsville",
+                        "Mitre 10 Mosgiel",
+                        "Mitre 10 Motueka",
+                        "Mitre 10 New Plymouth",
+                        "Mitre 10 Onehunga",
+                        "Mitre 10 Opotiki",
+                        "Mitre 10 Otorohanga",
+                        "Mitre 10 Pahiatua",
+                        "Mitre 10 Papamoa",
+                        "Mitre 10 Ponsonby",
+                        "Mitre 10 Stratford",
+                        "Mitre 10 Taumarunui",
+                        "Mitre 10 Te Anau",
+                        "Mitre 10 Te Kuiti",
+                        "Mitre 10 Te Puke",
+                        "Mitre 10 Thames",
+                        "Mitre 10 Waihi",
+                        "Mitre 10 Waipukurau",
+                        "Mitre 10 Waiuku",
+                        "Mitre 10 Westport",
+                        "Mitre 10 Whakatane",
+                        "Mitre 10 Whangaparaoa",
+                        "Mitre 10 Winton",
+                        "Mitre 10 MEGA Ferrymead -Trade",
+                        "Support Centre",
+                        "Mitre 10 MEGA Wanganui",
+                        "Support Centre SOW Contractor"
+                      ]
+                    }
+                  }
+                }
+              },
+              "establishment": {
+                "id": "3d3edfda-9e8d-4655-91bc-8a6d1fc1d0c5",
+                "name": "No Assigned Roles",
+                "link": "https://api.intellihr.io/v1/establishments/3d3edfda-9e8d-4655-91bc-8a6d1fc1d0c5"
+              },
+              "supervisorJob": {
+                "id": "56510c58-ce8d-4819-9016-dc17a029d1f4",
+                "jobStatus": "Current Job",
+                "name": "Quality & Test Manager",
+                "link": "https://api.intellihr.io/v1/jobs/56510c58-ce8d-4819-9016-dc17a029d1f4",
+                "positionTitle": {
+                  "id": "8461bc85-94df-4973-b874-d9cb42c99a1c",
+                  "name": "Quality & Test Manager",
+                  "code": "1151"
+                }
+              },
+              "supervisorPerson": {
+                "id": "f2c21359-58c4-4b29-944f-fe798b23a69c",
+                "displayName": "LynnePrem (Lynne) Chalmers",
+                "employeeNumber": "11017",
+                "autoIncrementIntellihrId": 703329,
+                "autoIncrementingIntellihrId": 703329,
+                "link": "https://api.intellihr.io/v1/people/f2c21359-58c4-4b29-944f-fe798b23a69c"
+              },
+              "employmentCondition": {
+                "id": "62b697c7-72a8-42e9-b0ec-47e63fd59969",
+                "startDate": null,
+                "endDate": null,
+                "name": "No Employment Condition",
+                "awardName": null,
+                "link": "https://api.intellihr.io/v1/employment-conditions/62b697c7-72a8-42e9-b0ec-47e63fd59969"
+              },
+              "remunerationSchedule": {
+                "type": "No Remuneration Schedule"
+              },
+              "customFields": {},
+              "comments": [],
+              "lastestJobChangeComment": null,
+              "workClass": "SC Permanent - F/T",
+              "workType": "Permanent",
+              "isPrimaryJob": true,
+              "jobStatus": "Current Job",
+              "name": "Commerce Cloud Test Analyst",
+              "fte": 1,
+              "positionStartDate": "2024-04-04T12:00:00+00:00",
+              "companyStartDate": "2024-04-04T12:00:00+00:00",
+              "createdBy": {
+                "id": "a33377b3-45f6-430b-861a-55bb3e13a6d5",
+                "link": "https://api.intellihr.io/v1/users/a33377b3-45f6-430b-861a-55bb3e13a6d5"
+              },
+              "updatedBy": {
+                "id": "a33377b3-45f6-430b-861a-55bb3e13a6d5",
+                "link": "https://api.intellihr.io/v1/users/a33377b3-45f6-430b-861a-55bb3e13a6d5"
+              },
+              "startDate": "2024-04-04T12:00:00+00:00",
+              "companyEndDate": null,
+              "endDate": null,
+              "isEndDateConfirmed": false,
+              "turnoverType": null,
+              "turnoverReason": null,
+              "createdAt": "2024-07-14T10:41:08+00:00"
+            },
+            "timeline": {},
+            "m10": {
+              "team": {
+                "meta": {
+                  "requestId": "2f7c049f-229e-41fe-9b8a-a2f81cf27bf8",
+                  "asAt": "2024-07-14T10:41:25+00:00"
+                },
+                "data": {
+                  "id": "76b25896-7d48-4e29-bc72-aa0467e1836d",
+                  "identifier": "",
+                  "name": "Test & Quality",
+                  "code": "",
+                  "notes": "",
+                  "parentId": "fe254cce-0342-4a09-83af-67a6d035d8c3",
+                  "isEnabled": true,
+                  "customFields": {
+                    "business_unit_code": {
+                      "definitionId": "f3e180cf-b239-496b-ac1a-7c9ef8a6b37a",
+                      "name": "Business Unit Code",
+                      "type": "TEXT",
+                      "value": "541"
+                    },
+                    "cost_centre_code": {
+                      "definitionId": "6f791be1-69a1-48f8-aaef-efcf1ff16380",
+                      "name": "Cost Centre Code",
+                      "type": "TEXT",
+                      "value": "11002105"
+                    },
+                    "organisation_level": {
+                      "definitionId": "5259b598-6ba6-4d1b-afc4-f9cb86a286d3",
+                      "name": "Organisation  Level",
+                      "type": "SINGLE_SELECT",
+                      "value": {
+                        "id": "ce208833-4ae4-4571-a5b1-5b06b623a043",
+                        "label": "Team"
+                      }
+                    }
+                  }
+                }
+              },
+              "subDepartment": {
+                "meta": {
+                  "requestId": "f6561f16-27b2-49c1-874e-0e3f5983ba23",
+                  "asAt": "2024-07-14T10:41:26+00:00"
+                },
+                "data": {
+                  "id": "fe254cce-0342-4a09-83af-67a6d035d8c3",
+                  "identifier": "",
+                  "name": "ICT Operations",
+                  "code": "",
+                  "notes": "",
+                  "parentId": "ebbd1c0a-425d-48a8-a505-e77437768650",
+                  "isEnabled": true,
+                  "customFields": {
+                    "business_unit_code": {
+                      "definitionId": "f3e180cf-b239-496b-ac1a-7c9ef8a6b37a",
+                      "name": "Business Unit Code",
+                      "type": "TEXT",
+                      "value": "53"
+                    },
+                    "cost_centre_code": {
+                      "definitionId": "6f791be1-69a1-48f8-aaef-efcf1ff16380",
+                      "name": "Cost Centre Code",
+                      "type": "TEXT",
+                      "value": "NA"
+                    },
+                    "organisation_level": {
+                      "definitionId": "5259b598-6ba6-4d1b-afc4-f9cb86a286d3",
+                      "name": "Organisation  Level",
+                      "type": "SINGLE_SELECT",
+                      "value": {
+                        "id": "7ae1a5bb-e19b-4b58-838d-0b2e73ddf313",
+                        "label": "Sub-department"
+                      }
+                    }
+                  }
+                }
+              },
+              "department": {
+                "meta": {
+                  "requestId": "b46e0681-b97d-4ad2-82f6-839d4157237d",
+                  "asAt": "2024-07-14T10:41:27+00:00"
+                },
+                "data": {
+                  "id": "ebbd1c0a-425d-48a8-a505-e77437768650",
+                  "identifier": "",
+                  "name": "Information Technology",
+                  "code": "",
+                  "notes": "",
+                  "parentId": "7aebc78d-03c3-4234-b7f4-0b7c8f80b9e6",
+                  "isEnabled": true,
+                  "customFields": {
+                    "business_unit_code": {
+                      "definitionId": "f3e180cf-b239-496b-ac1a-7c9ef8a6b37a",
+                      "name": "Business Unit Code",
+                      "type": "TEXT",
+                      "value": "50"
+                    },
+                    "cost_centre_code": {
+                      "definitionId": "6f791be1-69a1-48f8-aaef-efcf1ff16380",
+                      "name": "Cost Centre Code",
+                      "type": "TEXT",
+                      "value": "NA"
+                    },
+                    "organisation_level": {
+                      "definitionId": "5259b598-6ba6-4d1b-afc4-f9cb86a286d3",
+                      "name": "Organisation  Level",
+                      "type": "SINGLE_SELECT",
+                      "value": {
+                        "id": "f24e570d-a2ac-4baa-9577-e5ebdef4b8b8",
+                        "label": "Department"
+                      }
+                    }
+                  }
+                }
+              },
+              "wap": "150535411201",
+              "orgPosition": "50535411201",
+              "locationType": "SUPPORT_CENTRE",
+              "businessEntityCode": "1100",
+              "locationCode": "4000"
+            }
+          }
+        ],
+        "supervisor": {}
+      }
+    }
+  }
+}

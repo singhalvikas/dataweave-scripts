@@ -1,7 +1,7 @@
 # API
 api.id=18271041
-api.retry-max=3
-api.retry-interval=300000
+api.retry-max=1
+api.retry-interval=3000
 
 # HTTP Listener Configuration
 http.private.host=0.0.0.0
@@ -12,8 +12,8 @@ http.private.base-path=/v1/*
 aws.account=961954415957
 aws.region=ap-southeast-2
 aws.receive.poll.frequency=1
-aws.receive.poll.delay=60
-aws.sqs.url-host=https://sqs.ap-southeast-2.amazonaws.com
+aws.receive.poll.delay=1
+aws.sqs.url-host=http://localhost:9324
 
 # Common Alert HTTP Request Configuration
 common-alert.http.protocol=HTTPS
@@ -48,36 +48,36 @@ hris.location.type.support_centre=Support Centre
 hris.location.type.mimp=Global Sourcing Office
 hris.location.no-location-name=No Location
 
-common-alert.hris-process-support_centre.name=HRIS Test SC Business Errors
+common-alert.hris-process-support_centre.name=HRIS Local SC Business Errors
 common-alert.hris-process-support_centre.id=
 common-alert.hris-process-support_centre.phone-number=
-common-alert.hris-process-support_centre.email=HRISSupport@Mitre10.co.nz
+common-alert.hris-process-support_centre.email=vikas.singhal@mitre10.co.nz
 
-common-alert.hris-process-store.name=HRIS Test Store Business Errors
+common-alert.hris-process-store.name=HRIS Local Store Business Errors
 common-alert.hris-process-store.id=
 common-alert.hris-process-store.phone-number=
-common-alert.hris-process-store.email=HRISSupport@Mitre10.co.nz
+common-alert.hris-process-store.email=vikas.singhal@mitre10.co.nz
 
-common-alert.business-error-notification.email=HRISSupport@mitre10.co.nz
-common-alert.technical-error-notification.email=HRISSupport@mitre10.co.nz
-common-alert.support-centre-it.email=HRISSupport@mitre10.co.nz
+common-alert.business-error-notification.email=vikas.singhal@mitre10.co.nz
+common-alert.technical-error-notification.email=vikas.singhal@mitre10.co.nz
+common-alert.support-centre-it.email=vikas.singhal@mitre10.co.nz
 
 # SQS Queue config
 # HRIS to On Prem AD
 hris.sqs.onprem-ad.flow.concurrency=1
 hris.sqs.onprem-ad.send-event=true
 # The flag below if set to true will NOT invoke the real endpoint and simply skip the call.
-hris.sqs.onprem-ad.by-pass-real-endpoint=false
-hris.sqs.onprem-ad.queue-name=mule4-hris-opad-test.fifo
+hris.sqs.onprem-ad.by-pass-real-endpoint=true
+hris.sqs.onprem-ad.queue-name=mule4-hris-opad-dev.fifo
 hris.sqs.onprem-ad.queue-url=${aws.sqs.url-host}/${aws.account}/${hris.sqs.onprem-ad.queue-name}
 hris.sqs.onprem-ad.visibility.timeout=300
-hris.sqs.onprem-ad.dlq.queue-name=mule4-hris-opad-test-dlq.fifo
+hris.sqs.onprem-ad.dlq.queue-name=mule4-hris-opad-dev-dlq.fifo
 hris.sqs.onprem-ad.dlq.queue-url=${aws.sqs.url-host}/${aws.account}/${hris.sqs.onprem-ad.dlq.queue-name}
 hris.sqs.onprem-ad.dlq.visibility.timeout=300
-common-alert.onprem-ad.name=HRIS Test On Prem AD Failure
+common-alert.onprem-ad.name=HRIS Local On Prem AD Failure
 common-alert.onprem-ad.id=
 common-alert.onprem-ad.phone-number=
-common-alert.onprem-ad.email=HRISSupport@Mitre10.co.nz
+common-alert.onprem-ad.email=vikas.singhal@mitre10.co.nz
 
 # HRIS to Azure AD
 hris.sqs.azure-ad.send-event=true
@@ -87,93 +87,93 @@ hris.sqs.azure-ad.object-store.event.time-to-live.seconds=301
 hris.sqs.azure-ad.object-store.event.expiration-interval.minutes=2
 # The flag below if set to true will NOT invoke the real endpoint and simply skip the call.
 hris.sqs.azure-ad.by-pass-real-endpoint=false
-hris.sqs.azure-ad.queue-name=mule4-hris-aad-test.fifo
+hris.sqs.azure-ad.queue-name=mule4-hris-aad-dev.fifo
 hris.sqs.azure-ad.queue-url=${aws.sqs.url-host}/${aws.account}/${hris.sqs.azure-ad.queue-name}
-hris.sqs.azure-ad.visibility.timeout=300
+hris.sqs.azure-ad.visibility.timeout=30
 hris.sqs.azure-ad.visibility.timeout.update=60
-hris.sqs.azure-ad.dlq.queue-name=mule4-hris-aad-test-dlq.fifo
+hris.sqs.azure-ad.dlq.queue-name=mule4-hris-aad-dev-dlq.fifo
 hris.sqs.azure-ad.dlq.queue-url=${aws.sqs.url-host}/${aws.account}/${hris.sqs.azure-ad.dlq.queue-name}
 hris.sqs.azure-ad.dlq.visibility.timeout=300
-common-alert.azure-ad.name=HRIS Test Azure AD Failure
+common-alert.azure-ad.name=HRIS Local Azure AD Failure
 common-alert.azure-ad.id=
 common-alert.azure-ad.phone-number=
-common-alert.azure-ad.email=HRISSupport@Mitre10.co.nz
+common-alert.azure-ad.email=vikas.singhal@mitre10.co.nz
 
 # HRIS to Humanforce
 hris.sqs.hf.flow.concurrency=1
-hris.sqs.hf.send-event=true
+hris.sqs.hf.send-event=false
 # Azure AD event Object Store & check properties
 hris.sqs.hf.object-store.event.time-to-live.seconds=120
 hris.sqs.hf.object-store.event.expiration-interval.minutes=1
-hris.sqs.hf.queue-name=mule4-hris-hf-test.fifo
+hris.sqs.hf.queue-name=mule4-hris-hf-dev.fifo
 hris.sqs.hf.queue-url=${aws.sqs.url-host}/${aws.account}/${hris.sqs.hf.queue-name}
 hris.sqs.hf.visibility.timeout=300
 hris.sqs.hf.visibility.timeout.update.seconds=5
-hris.sqs.hf.dlq.queue-name=mule4-hris-hf-test-dlq.fifo
+hris.sqs.hf.dlq.queue-name=mule4-hris-hf-dev-dlq.fifo
 hris.sqs.hf.dlq.queue-url=${aws.sqs.url-host}/${aws.account}/${hris.sqs.hf.dlq.queue-name}
 hris.sqs.hf.dlq.visibility.timeout=300
-common-alert.hf.name=HRIS Test Humanforce Failure
+common-alert.hf.name=HRIS Local Humanforce Failure
 common-alert.hf.id=
 common-alert.hf.phone-number=
-common-alert.hf.email=HRISSupport@Mitre10.co.nz
+common-alert.hf.email=vikas.singhal@mitre10.co.nz
 
 # HRIS to Payglobal
-hris.sqs.pg.send-event=true
+hris.sqs.pg.send-event=false
 # The flag below if set to true will NOT invoke the real endpoint and simply skip the call.
-hris.sqs.pg.store.by-pass-real-endpoint=false
-hris.sqs.pg.queue-name=mule4-hris-pg-test.fifo
+hris.sqs.pg.store.by-pass-real-endpoint=true
+hris.sqs.pg.queue-name=mule4-hris-pg-dev.fifo
 hris.sqs.pg.queue-url=${aws.sqs.url-host}/${aws.account}/${hris.sqs.pg.queue-name}
 hris.sqs.pg.visibility.timeout=300
-hris.sqs.pg.dlq.queue-name=mule4-hris-pg-test-dlq.fifo
+hris.sqs.pg.dlq.queue-name=mule4-hris-pg-dev-dlq.fifo
 hris.sqs.pg.dlq.queue-url=${aws.sqs.url-host}/${aws.account}/${hris.sqs.pg.dlq.queue-name}
 hris.sqs.pg.dlq.visibility.timeout=300
-common-alert.pg.name=HRIS Test Payglobal Failure
+common-alert.pg.name=HRIS Local Payglobal Failure
 common-alert.pg.id=
 common-alert.pg.phone-number=
-common-alert.pg.email=HRISSupport@Mitre10.co.nz
+common-alert.pg.email=vikas.singhal@mitre10.co.nz
 
 # HRIS to IDM
-hris.sqs.idm.send-event=true
+hris.sqs.idm.send-event=false
 hris.sqs.idm.by-pass-real-endpoint=false
-hris.sqs.idm.queue-name=mule4-hris-idm-test.fifo
-hris.sqs.idm.dlq.queue-name=mule4-hris-idm-test-dlq.fifo
+hris.sqs.idm.queue-name=mule4-hris-idm-dev.fifo
+hris.sqs.idm.dlq.queue-name=mule4-hris-idm-dev-dlq.fifo
 hris.sqs.idm.queue-url=${aws.sqs.url-host}/${aws.account}/${hris.sqs.idm.queue-name}
 hris.sqs.idm.dlq.queue-url=${aws.sqs.url-host}/${aws.account}/${hris.sqs.idm.dlq.queue-name}
-common-alert.hris-sapidm.name=HRIS Test IDM Failure
+common-alert.hris-sapidm.name=HRIS Dev IDM Failure
 common-alert.hris-sapidm.id=
 common-alert.hris-sapidm.phone-number=
-common-alert.hris-sapidm.email=HRISSupport@Mitre10.co.nz
+common-alert.hris-sapidm.email=vikas.singhal@mitre10.co.nz
 sapidm.interfaceSystem=hris-sapidm
 hris-sapidm.sourceSystem=IntelliHR
 hris-sapidm.targetSystem=IdM
 
 # HRIS to LMS
-hris.sqs.lms.send-event=true
-hris.sqs.lms.queue-name=mule4-hris-lms-test.fifo
+hris.sqs.lms.send-event=false
+hris.sqs.lms.queue-name=mule4-hris-lms-dev.fifo
 hris.sqs.lms.queue-url=${aws.sqs.url-host}/${aws.account}/${hris.sqs.lms.queue-name}
-hris.sqs.lms.visibility.timeout=300
-hris.sqs.lms.dlq.queue-name=mule4-hris-lms-test-dlq.fifo
+hris.sqs.lms.visibility.timeout=12
+hris.sqs.lms.dlq.queue-name=mule4-hris-lms-dev-dlq.fifo
 hris.sqs.lms.dlq.queue-url=${aws.sqs.url-host}/${aws.account}/${hris.sqs.lms.dlq.queue-name}
 hris.sqs.lms.dlq.visibility.timeout=300
-common-alert.hris-lms.name=HRIS Test LMS Failure
+common-alert.hris-lms.name=HRIS Dev LMS Failure
 common-alert.hris-lms.id=
 common-alert.hris-lms.phone-number=
-common-alert.hris-lms.email=HRISSupport@Mitre10.co.nz
+common-alert.hris-lms.email=vikas.singhal@mitre10.co.nz
 hris-lms.interfaceSystem=hris-lms
 hris-lms.sourceSystem=IntelliHR
 hris-lms.targetSystem=LMS
 
 # LMS to HRIS
-lms.sqs.hris.queue-name=mule4-lms-hris-test.fifo
+lms.sqs.hris.queue-name=mule4-lms-hris-dev.fifo
 lms.sqs.hris.queue-url=${aws.sqs.url-host}/${aws.account}/${lms.sqs.hris.queue-name}
 lms.sqs.hris.visibility.timeout=300
-lms.sqs.hris.dlq.queue-name=mule4-lms-hris-test-dlq.fifo
+lms.sqs.hris.dlq.queue-name=mule4-lms-hris-dev-dlq.fifo
 lms.sqs.hris.dlq.queue-url=${aws.sqs.url-host}/${aws.account}/${lms.sqs.hris.dlq.queue-name}
 lms.sqs.hris.dlq.visibility.timeout=300
-common-alert.hris.name=LMS Test HRIS Failure
+common-alert.hris.name=LMS Dev HRIS Failure
 common-alert.hris.id=
 common-alert.hris.phone-number=
-common-alert.hris.email=HRISSupport@Mitre10.co.nz
+common-alert.hris.email=vikas.singhal@mitre10.co.nz
 lms-hris.interfaceSystem=lms-hris
 lms-hris.sourceSystem=LMS
 lms-hris.targetSystem=IntelliHR
@@ -226,6 +226,16 @@ powershell.onpremad.reconnection.milliseconds=30000
 powershell.onpremad.reconnection.attempts=2
 
 # Humanforce API
+# humanforce.api.host=m10test.timetarget.co.nz
+# humanforce.api.port=443
+# humanforce.api.path=/api/1.0
+
+# humanforce.api.host=m10sandbox.timetarget.co.nz
+# humanforce.api.port=443
+# humanforce.api.path=/api/1.0
+# humanforce.api.response-timeout=60000
+# humanforce.location.uses-pg.payroll-type=Store Bureau PG,Store Self Processing PG
+
 humanforce.api.protocol=HTTPS
 humanforce.api.host=m10.humanforce.com
 humanforce.api.port=443
@@ -247,8 +257,8 @@ payglobal.sftp.shared.host=ftp.myobpayglobal.com
 payglobal.sftp.shared.port=22
 payglobal.sftp.shared.connection.timeout.seconds=30
 payglobal.sftp.shared.response.timeout.seconds=30
-payglobal.sftp.shared.reconnection.milliseconds=30000
-payglobal.sftp.shared.reconnection.attempts=2
+payglobal.sftp.shared.reconnection.milliseconds=3000
+payglobal.sftp.shared.reconnection.attempts=1
 
 # Payglobal Support Centre SFTP
 payglobal.sftp.support-centre.host=${payglobal.sftp.shared.host}
@@ -276,6 +286,9 @@ sapidm.host=sapidm-qas.mitre10.co.nz
 sapidm.port=443
 sapidm.auth.user=sys_idmsvc
 sapidm.response-timeout=60000
+# dev_sapidm.host=sapidm-dev.mitre10.co.nz
+# dev_sapidm.port=443
+# dev_sapidm.auth.user=sys_idmsvc
 sapidm.token.ttl.minutes=10
 sapidm.task.create.guid=06B219BB-1807-42C8-975B-1290BEEB1220
 sapidm.task.update.guid=72D11B7A-EF86-4F68-8E1A-A3B0BD1A5F04
@@ -286,19 +299,33 @@ sapidm.api.base-path=/idmrestapi/v2/service
 sapidm.api.success-codes=200
 sapidm.api.response-timeout=60000
 
+# Container
+# lms.api.host=mitre10nz.360mooc.com
+# lms.api.port=30178
 # LMS API
 lms.api.protocol=HTTPS
 lms.api.host=mitre10nz.staging.360learning-dev.com
 lms.api.port=443
 lms.api.base-path=/api/v1
 lms.api.response-timeout=60000
-lms.api.max-retries=3
+lms.api.max-retries=2
 lms.api.millisec-between-retry=3000
+
+# Staging
+# company:6282c33e182db265bc43479e
+# 
+# Production
+# company:6282c33e182db265bc43479e
+
+# https://mitre10nz.staging.360learning-dev.com/
+
+# lms.courses-completion.prior-days-count=400
 
 azure-ad.user.enable=true
 azure-ad.add-leaver-to-delete-user-group=true
 azure-ad.remove-returner-from-delete-user-group=true
 azure-ad.delete-user-group.object-id=80e2efad-212a-4316-bb6f-df39a1382a1a
+# azure-ad.user.update=true
 azure-ad.assign-group.error-object-references-already-exist-message=One or more added object references already exist for the following modified properties: 'members'.
 intellihr.user.create=true
 intellihr.user.permission-groups.records.retrival-limit=100
@@ -316,6 +343,9 @@ intellihr.store-user.nuf-design.e3-licence=_Office365_E3(All)
 intellihr.support-centre-user.permission-group=*SUPPORT CENTRE - User 1 & 2: Team Member and 1-Up Manager
 intellihr.support-centre-user.nuf-design.id=111c8774-4c9b-42fe-b39d-388cb83e873b
 intellihr.support-centre-user.nuf-design.name=Support Centre - New User Form (NUF)
+# intellihr.support-centre-user.nuf-design.question.id=19ff39d7-016d-4764-8a37-92c1e844c7d0
+# intellihr.support-centre-user.nuf-design.question.id=bb1d9918-07ea-4d58-bcfd-8378f84d80b6
+# intellihr.support-centre-user.nuf-design.question.text=What type of Microsoft 365 license does the new starter require? (All SC users will by default receive an E3 license)
 intellihr.support-centre-user.nuf-design.question.id=19ff39d7-016d-4764-8a37-92c1e844c7d0
 intellihr.support-centre-user.nuf-design.question.text=All Support Centre users will by default receive a Microsoft 365 E3 license.
 intellihr.support-centre-user.nuf-design.prefix-licence=License_
@@ -336,20 +366,20 @@ mm.host=
 mm.port=
 
 # HRIS to MM
-hris.sqs.mm.send-event=true
-hris.sqs.mm.queue-name=mule4-hris-mm-test.fifo
+hris.sqs.mm.send-event=false
+hris.sqs.mm.queue-name=mule4-hris-mm-dev.fifo
 hris.sqs.mm.queue-url=${aws.sqs.url-host}/${aws.account}/${hris.sqs.mm.queue-name}
 hris.sqs.mm.visibility.timeout=300
-hris.sqs.mm.dlq.queue-name=mule4-hris-mm-test-dlq.fifo
+hris.sqs.mm.dlq.queue-name=mule4-hris-mm-dev-dlq.fifo
 hris.sqs.mm.dlq.queue-url=${aws.sqs.url-host}/${aws.account}/${hris.sqs.mm.dlq.queue-name}
 hris.sqs.mm.dlq.visibility.timeout=300
 hris-mm.interfaceSystem=hris-mm
 hris-mm.sourceSystem=IntelliHR
 hris-mm.targetSystem=MiniMaster
-common-alert.mm.name=HRIS Test Mini Master Failure
+common-alert.mm.name=HRIS Local Mini Master Failure
 common-alert.mm.id=
 common-alert.mm.phone-number=
-common-alert.mm.email=HRISSupport@Mitre10.co.nz
+common-alert.mm.email=vikas.singhal@mitre10.co.nz
 
 # LMS to HRIS
 hris.lms.object-store.time-to-live.days=1
@@ -366,16 +396,16 @@ hris.lms.object-store.expiration-interval.days=1
 #########################################################
 ## DMS SQS for vWork to Datastore ##
 ####################################
-dms.sqs.ds.send-event=true
+dms.sqs.ds.send-event=false
 dms.sqs.ds.dynamo.by-pass-real-endpoint=false
 dms.sqs.ds.s3.by-pass-real-endpoint=true
-dms.sqs.ds.queue-name=mule4-hris-ds-test.fifo
+dms.sqs.ds.queue-name=mule4-hris-lms-dev.fifo
 dms.sqs.ds.queue-url=${aws.sqs.url-host}/${aws.account}/${dms.sqs.ds.queue-name}
-dms.sqs.ds.visibility.timeout=300
-dms.sqs.ds.dlq.queue-name=mule4-hris-ds-test-dlq.fifo
+dms.sqs.ds.visibility.timeout=30
+dms.sqs.ds.dlq.queue-name=mule4-hris-lms-dev-dlq.fifo
 dms.sqs.ds.dlq.queue-url=${aws.sqs.url-host}/${aws.account}/${dms.sqs.ds.dlq.queue-url}
 dms.sqs.ds.dlq.visibility.timeout=300
-common-alert.dms-ds.name=HRIS Test DMS Failure
+common-alert.dms-ds.name=HRIS Dev DMS Failure
 common-alert.dms-ds.id=
 common-alert.dms-ds.phone-number=
 common-alert.dms-ds.email=vikas.singhal@mitre10.co.nz
@@ -383,14 +413,43 @@ dms.interfaceSystem=dms-ds
 dms-ds.sourceSystem=vWork
 dms-ds.targetSystem=DynamoDB
 
+# DMS to Sharepoint
+dms.sqs.ds.send-event=true
+dms.sqs.ds.dynamo.by-pass-real-endpoint=false
+dms.sqs.ds.s3.by-pass-real-endpoint=true
+hris.sqs.dms.queue-name=mule4-hris-lms-dev.fifo
+hris.sqs.dms.queue-url=${aws.sqs.url-host}/${aws.account}/${hris.sqs.lms.queue-name}
+hris.sqs.dms.visibility.timeout=12
+hris.sqs.dms.dlq.queue-name=mule4-hris-lms-dev-dlq.fifo
+hris.sqs.dms.dlq.queue-url=${aws.sqs.url-host}/${aws.account}/${hris.sqs.lms.dlq.queue-name}
+hris.sqs.dms.dlq.visibility.timeout=300
+common-alert.hris-dms.name=HRIS Dev LMS Failure
+common-alert.hris-dms.id=
+common-alert.hris-dms.phone-number=
+common-alert.hris-dms.email=vikas.singhal@mitre10.co.nz
+
 ##########################
 ## DynamoDB API for DMS ##
 ##########################
+# dms.sqs.ds.dynamo.by-pass-real-endpoint=false
+# dms.dynamo.table.name=vWorks-test
+# dms.dynamo.api.protocol=HTTPS
+# dms.dynamo.api.host=eatvuxl9nd.execute-api.ap-southeast-2.amazonaws.com
+# dms.dynamo.api.port=443
+# dms.dynamo.api.base-path=/sit
+# dms.dynamo.api.request-path=/vWorks-crud-data
+# # dms.dynamo.api.host=bt4ls0q5pb-vpce-0df9676bcac33237e.execute-api.ap-southeast-2.amazonaws.com
+# # dms.dynamo.api.request-path=/jobs
+# dms.dynamo.api.response-timeout=10000
+# dms.dynamo.api.success-codes=200
+# dms.dynamo.api.max-retries=2
+# dms.dynamo.api.millisec-between-retry=2000
+
 dms.dynamo.table.name=vWorks-test
 dms.dynamo.api.protocol=HTTPS
-dms.dynamo.api.host=xt6qhsmvhc-vpce-0f76c975f600e0995.execute-api.ap-southeast-2.amazonaws.com
+dms.dynamo.api.host=bt4ls0q5pb-vpce-0df9676bcac33237e.execute-api.ap-southeast-2.amazonaws.com
 dms.dynamo.api.port=443
-dms.dynamo.api.base-path=/sit
+dms.dynamo.api.base-path=/dev
 dms.dynamo.api.request-path=/jobs
 dms.dynamo.api.response-timeout=60000
 dms.dynamo.api.success-codes=200
@@ -414,9 +473,9 @@ dms.vwork.api.content-type=application/xml; charset=utf-8
 dms.vwork.api.use-third-party=false
 dms.vwork.api.response-timeout=60000
 dms.vwork.api.success-codes=200
-dms.vwork.api.max-retries=3
-dms.vwork.api.millisec-between-retry=3000
-dms.vwork.api.millisec-call-wait=30000
+dms.vwork.api.max-retries=2
+dms.vwork.api.millisec-between-retry=2000
+dms.vwork.api.millisec-call-wait=3000
 
 db.healthandsafety.database=test_health_and_safety
 db.healthandsafety.host=mule4-sit-rds.cduevppgfdr5.ap-southeast-2.rds.amazonaws.com
@@ -468,29 +527,29 @@ support.centre.legal.entity.code=112
 #########################################
 # HRIS to Esker Integration Configuration
 hris.sqs.esker.send-event=false
-hris.sqs.esker.queue-name=mule4-hris-esker-users-test.fifo
+hris.sqs.esker.queue-name=mule4-hris-esker-users-dev.fifo
 hris.sqs.esker.queue-url=${aws.sqs.url-host}/${aws.account}/${hris.sqs.esker.queue-name}
 hris.sqs.esker.visibility.timeout=300
-hris.sqs.esker.dlq.queue-name=mule4-hris-esker-users-test-dlq.fifo
+hris.sqs.esker.dlq.queue-name=mule4-hris-esker-users-dev-dlq.fifo
 hris.sqs.esker.dlq.queue-url=${aws.sqs.url-host}/${aws.account}/${hris.sqs.esker.dlq.queue-name}
 hris.sqs.esker.dlq.visibility.timeout=300
 hris-esker.interfaceSystem=hris-esker
 hris-esker.sourceSystem=IntelliHR
 hris-esker.targetSystem=Esker
-common-alert.hris-esker.name=HRIS Test Esker Failure
+common-alert.hris-esker.name=HRIS Local Esker Failure
 common-alert.hris-esker.id=
 common-alert.hris-esker.phone-number=
-common-alert.hris-esker.email=HRISSupport@Mitre10.co.nz
+common-alert.hris-esker.email=vikas.singhal@mitre10.co.nz
 # Esker SFTP Configuration
-esker.sftp.host=sftp-ae5.ondemand.esker.com
+esker.sftp.host=sftp.files.preprod.mitre10.co.nz
 esker.sftp.port=22
-esker.sftp.username=Users@05284907.20002586
+esker.sftp.username=preprod-mock-external
 esker.sftp.connection.timeout.seconds=30
 esker.sftp.response.timeout.seconds=30
 esker.sftp.reconnection.milliseconds=3000
 esker.sftp.reconnection.attempts=1
-esker.sftp.directory=In_Users
-esker.sftp.max-retry=5
+esker.sftp.directory=unbxd
+esker.sftp.max-retry=2
 esker.sftp.frequency=10000
 # Esker Flow Configuration
 hris-esker-queue-consumer.initial-state=stopped
@@ -499,31 +558,58 @@ hris-esker-dlq-queue-consumer.initial-state=stopped
 esker.user-group.displayName=App_Esker
 esker.user-most-basic-profile.name=APSpecialist
 
+################################################
+#   Pricer-Plaza Integration related details   #
+################################################
+# HRIS to Pricer-Plaza Integration Configuration
+
+# hris.sqs.idm.queue-name=mule4-hris-idm-dev.fifo
+# hris.sqs.idm.dlq.queue-name=mule4-hris-idm-dev-dlq.fifo
+
+# hris.sqs.pricer-plaza.queue-name=mule4-hris-pricer-plaza-dev.fifo
+# hris.sqs.pricer-plaza.dlq.queue-name=mule4-hris-pricer-plaza-dlq-dev.fifo
+
+# hris.sqs.pricer-plaza.queue-name=mule4-hris-idm-dev.fifo
+# hris.sqs.pricer-plaza.dlq.queue-name=mule4-hris-idm-dev-dlq.fifo
+
 # HRIS to Pricer-Plaza Integration Configuration and SQS to update when available
 # Esker user SQS must be changed here and instead Pricer-Plaza user SQS must be used
 hris.sqs.pricer-plaza.send-event=false
-hris.sqs.pricer-plaza.queue-name=mule4-hris-pricer-plaza-test.fifo
+hris.sqs.pricer-plaza.queue-name=mule4-hris-pricer-plaza-dev.fifo
 hris.sqs.pricer-plaza.queue-url=${aws.sqs.url-host}/${aws.account}/${hris.sqs.pricer-plaza.queue-name}
 hris.sqs.pricer-plaza.visibility.timeout=300
-hris.sqs.pricer-plaza.dlq.queue-name=mule4-hris-pricer-plaza-dlq-test.fifo
+hris.sqs.pricer-plaza.dlq.queue-name=mule4-hris-pricer-plaza-dlq-dev.fifo
 hris.sqs.pricer-plaza.dlq.queue-url=${aws.sqs.url-host}/${aws.account}/${hris.sqs.pricer-plaza.dlq.queue-name}
 hris.sqs.pricer-plaza.dlq.visibility.timeout=300
 hris-pricer-plaza.interfaceSystem=hris-pricer-plaza
 hris-pricer-plaza.sourceSystem=IntelliHR
 hris-pricer-plaza.targetSystem=Pricer-Plaza
-common-alert.hris-pricer-plaza.name=HRIS Test Pricer-Plaza Failure
+common-alert.hris-pricer-plaza.name=HRIS Dev Pricer-Plaza Failure
 common-alert.hris-pricer-plaza.id=
 common-alert.hris-pricer-plaza.phone-number=
-common-alert.hris-pricer-plaza.email=HRISSupport@mitre10.co.nz
+common-alert.hris-pricer-plaza.email=vikas.singhal@mitre10.co.nz
 
 sendgrid.baseUri=https://api.sendgrid.com/
-sendgrid.notification.peopletech.email=HRISSupport+Peopletech@mitre10.co.nz
+# sendgrid.notification.peopletech.email=vikas.singhal@mitre10.co.nz
+# sendgrid.notification.reply-to=vikas.singhal@mitre10.co.nz
+# sendgrid.notification.reply-to=DoNotReplyPeopleTech@mitre10.co.nz
+# sendgrid.notification.reply-to=Do Not Reply PeopleTech <DoNotReplyPeopleTech@mitre10.co.nz>
+# sendgrid.notification.peopletech.email=vikas.singhal@mitre10.co.nz
+
+# sendgrid.notification.reply-to=DoNotReplyPeopleTech@mitre10.co.nz
+# sendgrid.notification.peopletech.email=HRISSupport@Mitre10.co.nz
+
+# sendgrid.notification.reply-to=vikas.singhal@mitre10.co.nz
+# sendgrid.notification.peopletech.email=HRISSupport@mitre10.co.nz
+# sendgrid.notification.peopletech.email=vikas.singhal@mitre10.co.nz
+# sendgrid.notification.peopletech.email=vikasau99@gmail.com
+sendgrid.notification.peopletech.email=vikas.singhal@mitre10.co.nz
 sendgrid.notification.reply-to.email=HRISSupport@mitre10.co.nz
 sendgrid.notification.reply-to.name=HRIS Support
 sendgrid.notification.from.email=HRISSupport@mitre10.co.nz
 sendgrid.notification.from.name=HRIS Support
-sendgrid.retry-max=2
-sendgrid.retry-interval=100000
+sendgrid.retry-max=1
+sendgrid.retry-interval=3000
 sendgrid.template.id.1001=d-9bc1c78cf52d48108b2dd86d49cf05ef
 sendgrid.template.id.1002=d-5359077f94b049b29d785a3bc7f48cf9
 sendgrid.template.id.1003=d-4579656968064d2ea385cf0eaa6db8c2
@@ -559,3 +645,53 @@ sendgrid.template.id.1032=d-4e758dbc62164204be22bb1bc1377438
 sendgrid.template.id.1033=d-d0a58552bcbf4557a332c058d2ac1a13
 
 ############################################################
+hris.sqs.azure-ad.by-pass-real-endpoint=false
+
+hris.sqs.azure-ad.by-pass-real-endpoint=false
+aws.dms.s3.bucket=mitre10-files-preprod/mock/externals/unbxd2/
+
+# hris.batch-events.scheduler.cron.expr=0 0 18 ? * * *
+## hris.batch-events.object-store=false
+## hris.batch-events.scheduler.cron.expr=0 0 10 ? * * *
+## hris.batch-events.scheduler.frequency=300000
+## hris.batch-events.scheduler.cron.timezone=NZ
+
+# hris.sns.topic-name=mule4-hris-hr-event-dev.fifo
+
+# hris.sqs.intellihr-source.queue-name=mule4-hris-process-dev.fifo
+# hris.sqs.intellihr-source.dlq.queue-name=mule4-hris-process-dlq-dev.fifo
+# hris.sqs.intellihr-source.queue-url=${aws.sqs.url-host}/${aws.account}/${hris.sqs.intellihr-source.queue-name}
+# hris.sqs.intellihr-source.dlq.queue-url=${aws.sqs.url-host}/${aws.account}/${hris.sqs.intellihr-source.dlq.queue-name}
+# hris.sqs.intellihr-source.visibility.timeout=300
+# hris.sqs.intellihr-source.dlq.visibility.timeout=300
+
+# azure-ad.user.enable=false
+# azure-ad.user.update=false
+# intellihr.user.create=true
+
+# store.person.email.acceptable-tags=Store Pay Slip,Humanforce Mobile App
+# lms.courses.completed-in-last-day=10000
+# # lms.courses-completed.days-today-to-yesterday=1
+# # lms.courses-completed.days-yesterday-to-today=1
+
+# lms.courses-completed.days-today-to-yesterday=10
+# lms.courses-completed.days-yesterday-to-today=100
+
+# HRIS to Esker
+# mule4-hris-esker-users-dev.fifo
+# mule4-hris-esker-users-dlq-dev.fifo
+
+#AWS S3
+m10.aws.s3.bucket=test-b2b-files-961954415957
+
+# Flows
+idm-listener-choice-subflow=idm-listener-choice-subflow
+eh-listener-choice-subflow=eh-listener-choice-subflow
+hf-listener-choice-subflow=hf-listener-choice-subflow
+pg-listener-choice-subflow=pg-listener-choice-subflow
+mm-listener-choice-subflow=mm-listener-choice-subflow
+ad-listener-choice-subflow=ad-listener-choice-subflow
+esker-listener-choice-subflow=esker-listener-choice-subflow
+lms-listener-choice-subflow=lms-listener-choice-subflow
+lmshris-listener-choice-subflow=lmshris-listener-choice-subflow
+onad-listener-choice-subflow=onad-listener-choice-subflow

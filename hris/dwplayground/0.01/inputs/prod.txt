@@ -1,5 +1,5 @@
 # API
-api.id=18271041
+api.id=18340107
 api.retry-max=3
 api.retry-interval=300000
 
@@ -9,7 +9,7 @@ http.private.port=8091
 http.private.base-path=/v1/*
 
 # P2P SQS Configuration
-aws.account=961954415957
+aws.account=907357329094
 aws.region=ap-southeast-2
 aws.receive.poll.frequency=1
 aws.receive.poll.delay=60
@@ -17,9 +17,9 @@ aws.sqs.url-host=https://sqs.ap-southeast-2.amazonaws.com
 
 # Common Alert HTTP Request Configuration
 common-alert.http.protocol=HTTPS
-common-alert.http.host=internal-npe.api4.mitre10.co.nz
+common-alert.http.host=internal.api4.mitre10.co.nz
 common-alert.http.port=443
-common-alert.http.path=/test-m10-common-services/v1/alert
+common-alert.http.path=/prod-m10-common-services/v1/alert
 common-alert.http.response-timeout=30000
 
 common-alert.component=mitre10-hris-process
@@ -27,19 +27,19 @@ common-alert.alertType=Technical
 common-alert.alertSystem=loggly
 
 # JWT HTTP Request Configuration
-jwt.http.username=7lu6fb5hma32lfi6jsuislqnnt
-jwt.http.host=test-mule-api-961954415957.auth.ap-southeast-2.amazoncognito.com
+jwt.http.username=5h1b13v4en6jdkjbgqhjb8njn0
+jwt.http.host=prod-mule-api-907357329094.auth.ap-southeast-2.amazoncognito.com
 jwt.http.port=443
 jwt.http.path=/oauth2/token
 jwt.http.protocol=HTTPS
 jwt.http.response-timeout=30000
-jwt.http.token-scope.translate=test-mule-api/translate
-jwt.http.token-scope.alert=test-mule-api/alert
+jwt.http.token-scope.translate=prod-mule-api/translate
+jwt.http.token-scope.alert=prod-mule-api/alert
 
 ############################################################################################
 # HRIS Configuration
-hris.mapping.apply.test-flag=true
-hris.mapping.apply.test-flag.value=HRIS
+hris.mapping.apply.test-flag=false
+hris.mapping.apply.test-flag.value=
 hris.mapping.upn.allowed-characters.regex=[^a-z0-9A-Z\\-]
 hris.mapping.upn.sam-account-name.max-size=20
 hris.webevent.job.company_start_date_upcoming.offsets=-1 month|-14 days|-7 days|-3 days|-1 days|0 days
@@ -48,15 +48,15 @@ hris.location.type.support_centre=Support Centre
 hris.location.type.mimp=Global Sourcing Office
 hris.location.no-location-name=No Location
 
-common-alert.hris-process-support_centre.name=HRIS Test SC Business Errors
+common-alert.hris-process-support_centre.name=HRIS Prod SC Business Errors
 common-alert.hris-process-support_centre.id=
 common-alert.hris-process-support_centre.phone-number=
-common-alert.hris-process-support_centre.email=HRISSupport@Mitre10.co.nz
+common-alert.hris-process-support_centre.email=HRISUsers@mitre10.co.nz
 
-common-alert.hris-process-store.name=HRIS Test Store Business Errors
+common-alert.hris-process-store.name=HRIS Prod Store Business Errors
 common-alert.hris-process-store.id=
 common-alert.hris-process-store.phone-number=
-common-alert.hris-process-store.email=HRISSupport@Mitre10.co.nz
+common-alert.hris-process-store.email=HRISStoreusers@mitre10.co.nz
 
 common-alert.business-error-notification.email=HRISSupport@mitre10.co.nz
 common-alert.technical-error-notification.email=HRISSupport@mitre10.co.nz
@@ -68,13 +68,13 @@ hris.sqs.onprem-ad.flow.concurrency=1
 hris.sqs.onprem-ad.send-event=true
 # The flag below if set to true will NOT invoke the real endpoint and simply skip the call.
 hris.sqs.onprem-ad.by-pass-real-endpoint=false
-hris.sqs.onprem-ad.queue-name=mule4-hris-opad-test.fifo
+hris.sqs.onprem-ad.queue-name=mule4-hris-opad-prod.fifo
 hris.sqs.onprem-ad.queue-url=${aws.sqs.url-host}/${aws.account}/${hris.sqs.onprem-ad.queue-name}
 hris.sqs.onprem-ad.visibility.timeout=300
-hris.sqs.onprem-ad.dlq.queue-name=mule4-hris-opad-test-dlq.fifo
+hris.sqs.onprem-ad.dlq.queue-name=mule4-hris-opad-prod-dlq.fifo
 hris.sqs.onprem-ad.dlq.queue-url=${aws.sqs.url-host}/${aws.account}/${hris.sqs.onprem-ad.dlq.queue-name}
 hris.sqs.onprem-ad.dlq.visibility.timeout=300
-common-alert.onprem-ad.name=HRIS Test On Prem AD Failure
+common-alert.onprem-ad.name=HRIS Prod On Prem AD Failure
 common-alert.onprem-ad.id=
 common-alert.onprem-ad.phone-number=
 common-alert.onprem-ad.email=HRISSupport@Mitre10.co.nz
@@ -87,14 +87,14 @@ hris.sqs.azure-ad.object-store.event.time-to-live.seconds=301
 hris.sqs.azure-ad.object-store.event.expiration-interval.minutes=2
 # The flag below if set to true will NOT invoke the real endpoint and simply skip the call.
 hris.sqs.azure-ad.by-pass-real-endpoint=false
-hris.sqs.azure-ad.queue-name=mule4-hris-aad-test.fifo
+hris.sqs.azure-ad.queue-name=mule4-hris-aad-prod.fifo
 hris.sqs.azure-ad.queue-url=${aws.sqs.url-host}/${aws.account}/${hris.sqs.azure-ad.queue-name}
 hris.sqs.azure-ad.visibility.timeout=300
 hris.sqs.azure-ad.visibility.timeout.update=60
-hris.sqs.azure-ad.dlq.queue-name=mule4-hris-aad-test-dlq.fifo
+hris.sqs.azure-ad.dlq.queue-name=mule4-hris-aad-prod-dlq.fifo
 hris.sqs.azure-ad.dlq.queue-url=${aws.sqs.url-host}/${aws.account}/${hris.sqs.azure-ad.dlq.queue-name}
 hris.sqs.azure-ad.dlq.visibility.timeout=300
-common-alert.azure-ad.name=HRIS Test Azure AD Failure
+common-alert.azure-ad.name=HRIS Prod Azure AD Failure
 common-alert.azure-ad.id=
 common-alert.azure-ad.phone-number=
 common-alert.azure-ad.email=HRISSupport@Mitre10.co.nz
@@ -105,14 +105,14 @@ hris.sqs.hf.send-event=true
 # Azure AD event Object Store & check properties
 hris.sqs.hf.object-store.event.time-to-live.seconds=120
 hris.sqs.hf.object-store.event.expiration-interval.minutes=1
-hris.sqs.hf.queue-name=mule4-hris-hf-test.fifo
+hris.sqs.hf.queue-name=mule4-hris-hf-prod.fifo
 hris.sqs.hf.queue-url=${aws.sqs.url-host}/${aws.account}/${hris.sqs.hf.queue-name}
 hris.sqs.hf.visibility.timeout=300
 hris.sqs.hf.visibility.timeout.update.seconds=5
-hris.sqs.hf.dlq.queue-name=mule4-hris-hf-test-dlq.fifo
+hris.sqs.hf.dlq.queue-name=mule4-hris-hf-prod-dlq.fifo
 hris.sqs.hf.dlq.queue-url=${aws.sqs.url-host}/${aws.account}/${hris.sqs.hf.dlq.queue-name}
 hris.sqs.hf.dlq.visibility.timeout=300
-common-alert.hf.name=HRIS Test Humanforce Failure
+common-alert.hf.name=HRIS Prod Humanforce Failure
 common-alert.hf.id=
 common-alert.hf.phone-number=
 common-alert.hf.email=HRISSupport@Mitre10.co.nz
@@ -120,14 +120,14 @@ common-alert.hf.email=HRISSupport@Mitre10.co.nz
 # HRIS to Payglobal
 hris.sqs.pg.send-event=true
 # The flag below if set to true will NOT invoke the real endpoint and simply skip the call.
-hris.sqs.pg.store.by-pass-real-endpoint=false
-hris.sqs.pg.queue-name=mule4-hris-pg-test.fifo
+hris.sqs.pg.store.by-pass-real-endpoint=true
+hris.sqs.pg.queue-name=mule4-hris-pg-prod.fifo
 hris.sqs.pg.queue-url=${aws.sqs.url-host}/${aws.account}/${hris.sqs.pg.queue-name}
 hris.sqs.pg.visibility.timeout=300
-hris.sqs.pg.dlq.queue-name=mule4-hris-pg-test-dlq.fifo
+hris.sqs.pg.dlq.queue-name=mule4-hris-pg-prod-dlq.fifo
 hris.sqs.pg.dlq.queue-url=${aws.sqs.url-host}/${aws.account}/${hris.sqs.pg.dlq.queue-name}
 hris.sqs.pg.dlq.visibility.timeout=300
-common-alert.pg.name=HRIS Test Payglobal Failure
+common-alert.pg.name=HRIS Prod Payglobal Failure
 common-alert.pg.id=
 common-alert.pg.phone-number=
 common-alert.pg.email=HRISSupport@Mitre10.co.nz
@@ -135,11 +135,11 @@ common-alert.pg.email=HRISSupport@Mitre10.co.nz
 # HRIS to IDM
 hris.sqs.idm.send-event=true
 hris.sqs.idm.by-pass-real-endpoint=false
-hris.sqs.idm.queue-name=mule4-hris-idm-test.fifo
-hris.sqs.idm.dlq.queue-name=mule4-hris-idm-test-dlq.fifo
+hris.sqs.idm.queue-name=mule4-hris-idm-prod.fifo
+hris.sqs.idm.dlq.queue-name=mule4-hris-idm-prod-dlq.fifo
 hris.sqs.idm.queue-url=${aws.sqs.url-host}/${aws.account}/${hris.sqs.idm.queue-name}
 hris.sqs.idm.dlq.queue-url=${aws.sqs.url-host}/${aws.account}/${hris.sqs.idm.dlq.queue-name}
-common-alert.hris-sapidm.name=HRIS Test IDM Failure
+common-alert.hris-sapidm.name=HRIS Prod SAP IDM Failure
 common-alert.hris-sapidm.id=
 common-alert.hris-sapidm.phone-number=
 common-alert.hris-sapidm.email=HRISSupport@Mitre10.co.nz
@@ -149,13 +149,13 @@ hris-sapidm.targetSystem=IdM
 
 # HRIS to LMS
 hris.sqs.lms.send-event=true
-hris.sqs.lms.queue-name=mule4-hris-lms-test.fifo
+hris.sqs.lms.queue-name=mule4-hris-lms-prod.fifo
 hris.sqs.lms.queue-url=${aws.sqs.url-host}/${aws.account}/${hris.sqs.lms.queue-name}
 hris.sqs.lms.visibility.timeout=300
-hris.sqs.lms.dlq.queue-name=mule4-hris-lms-test-dlq.fifo
+hris.sqs.lms.dlq.queue-name=mule4-hris-lms-prod-dlq.fifo
 hris.sqs.lms.dlq.queue-url=${aws.sqs.url-host}/${aws.account}/${hris.sqs.lms.dlq.queue-name}
 hris.sqs.lms.dlq.visibility.timeout=300
-common-alert.hris-lms.name=HRIS Test LMS Failure
+common-alert.hris-lms.name=HRIS Prod LMS Failure
 common-alert.hris-lms.id=
 common-alert.hris-lms.phone-number=
 common-alert.hris-lms.email=HRISSupport@Mitre10.co.nz
@@ -164,13 +164,13 @@ hris-lms.sourceSystem=IntelliHR
 hris-lms.targetSystem=LMS
 
 # LMS to HRIS
-lms.sqs.hris.queue-name=mule4-lms-hris-test.fifo
+lms.sqs.hris.queue-name=mule4-lms-hris-prod.fifo
 lms.sqs.hris.queue-url=${aws.sqs.url-host}/${aws.account}/${lms.sqs.hris.queue-name}
 lms.sqs.hris.visibility.timeout=300
-lms.sqs.hris.dlq.queue-name=mule4-lms-hris-test-dlq.fifo
+lms.sqs.hris.dlq.queue-name=mule4-lms-hris-prod-dlq.fifo
 lms.sqs.hris.dlq.queue-url=${aws.sqs.url-host}/${aws.account}/${lms.sqs.hris.dlq.queue-name}
 lms.sqs.hris.dlq.visibility.timeout=300
-common-alert.hris.name=LMS Test HRIS Failure
+common-alert.hris.name=LMS Prod HRIS Failure
 common-alert.hris.id=
 common-alert.hris.phone-number=
 common-alert.hris.email=HRISSupport@Mitre10.co.nz
@@ -190,7 +190,7 @@ hris.token.object-store.event.time-to-live.seconds=3000
 hris.token.object-store.event.expiration-interval.minutes=5
 
 # intelliHR API
-intellihr.api.tenant=mitre10nz-uat3
+intellihr.api.tenant=mitre10nz
 intellihr.api.protocol=HTTPS
 intellihr.api.host=api.intellihr.io
 intellihr.api.port=443
@@ -227,7 +227,7 @@ powershell.onpremad.reconnection.attempts=2
 
 # Humanforce API
 humanforce.api.protocol=HTTPS
-humanforce.api.host=m10.humanforce.com
+humanforce.api.host=m10.timetarget.co.nz
 humanforce.api.port=443
 humanforce.api.path=/api/1.0
 humanforce.api.response-timeout=60000
@@ -253,8 +253,8 @@ payglobal.sftp.shared.reconnection.attempts=2
 # Payglobal Support Centre SFTP
 payglobal.sftp.support-centre.host=${payglobal.sftp.shared.host}
 payglobal.sftp.support-centre.port=${payglobal.sftp.shared.port}
-payglobal.sftp.support-centre.username=1013-SupportCentre-SIT
-payglobal.sftp.support-centre.path=/SupportCentre-SIT/Import/Employee/in
+payglobal.sftp.support-centre.username=1013-SupportCentre-Prod
+payglobal.sftp.support-centre.path=/SupportCentre-Prod/Import/Employee/in
 payglobal.sftp.support-centre.connection.timeout.seconds=${payglobal.sftp.shared.connection.timeout.seconds}
 payglobal.sftp.support-centre.response.timeout.seconds=${payglobal.sftp.shared.response.timeout.seconds}
 payglobal.sftp.support-centre.reconnection.milliseconds=${payglobal.sftp.shared.reconnection.milliseconds}
@@ -272,7 +272,7 @@ payglobal.sftp.store.reconnection.attempts=${payglobal.sftp.shared.reconnection.
 
 # HRIS to IDM
 sapidm.protocol=HTTPS
-sapidm.host=sapidm-qas.mitre10.co.nz
+sapidm.host=sapidm.mitre10.co.nz
 sapidm.port=443
 sapidm.auth.user=sys_idmsvc
 sapidm.response-timeout=60000
@@ -288,7 +288,7 @@ sapidm.api.response-timeout=60000
 
 # LMS API
 lms.api.protocol=HTTPS
-lms.api.host=mitre10nz.staging.360learning-dev.com
+lms.api.host=mitre10nz.360learning.com
 lms.api.port=443
 lms.api.base-path=/api/v1
 lms.api.response-timeout=60000
@@ -336,17 +336,17 @@ mm.host=
 mm.port=
 
 # HRIS to MM
-hris.sqs.mm.send-event=true
-hris.sqs.mm.queue-name=mule4-hris-mm-test.fifo
+hris.sqs.mm.send-event=false
+hris.sqs.mm.queue-name=mule4-hris-mm-prod.fifo
 hris.sqs.mm.queue-url=${aws.sqs.url-host}/${aws.account}/${hris.sqs.mm.queue-name}
 hris.sqs.mm.visibility.timeout=300
-hris.sqs.mm.dlq.queue-name=mule4-hris-mm-test-dlq.fifo
+hris.sqs.mm.dlq.queue-name=mule4-hris-mm-prod-dlq.fifo
 hris.sqs.mm.dlq.queue-url=${aws.sqs.url-host}/${aws.account}/${hris.sqs.mm.dlq.queue-name}
 hris.sqs.mm.dlq.visibility.timeout=300
 hris-mm.interfaceSystem=hris-mm
 hris-mm.sourceSystem=IntelliHR
 hris-mm.targetSystem=MiniMaster
-common-alert.mm.name=HRIS Test Mini Master Failure
+common-alert.mm.name=HRIS Prod Mini Master Failure
 common-alert.mm.id=
 common-alert.mm.phone-number=
 common-alert.mm.email=HRISSupport@Mitre10.co.nz
@@ -369,13 +369,13 @@ hris.lms.object-store.expiration-interval.days=1
 dms.sqs.ds.send-event=true
 dms.sqs.ds.dynamo.by-pass-real-endpoint=false
 dms.sqs.ds.s3.by-pass-real-endpoint=true
-dms.sqs.ds.queue-name=mule4-hris-ds-test.fifo
+dms.sqs.ds.queue-name=mule4-hris-ds-prod.fifo
 dms.sqs.ds.queue-url=${aws.sqs.url-host}/${aws.account}/${dms.sqs.ds.queue-name}
 dms.sqs.ds.visibility.timeout=300
-dms.sqs.ds.dlq.queue-name=mule4-hris-ds-test-dlq.fifo
+dms.sqs.ds.dlq.queue-name=mule4-hris-ds-prod-dlq.fifo
 dms.sqs.ds.dlq.queue-url=${aws.sqs.url-host}/${aws.account}/${dms.sqs.ds.dlq.queue-url}
 dms.sqs.ds.dlq.visibility.timeout=300
-common-alert.dms-ds.name=HRIS Test DMS Failure
+common-alert.dms-ds.name=HRIS Prod DMS Failure
 common-alert.dms-ds.id=
 common-alert.dms-ds.phone-number=
 common-alert.dms-ds.email=vikas.singhal@mitre10.co.nz
@@ -388,9 +388,9 @@ dms-ds.targetSystem=DynamoDB
 ##########################
 dms.dynamo.table.name=vWorks-test
 dms.dynamo.api.protocol=HTTPS
-dms.dynamo.api.host=xt6qhsmvhc-vpce-0f76c975f600e0995.execute-api.ap-southeast-2.amazonaws.com
+dms.dynamo.api.host=bt4ls0q5pb-vpce-0df9676bcac33237e.execute-api.ap-southeast-2.amazonaws.com
 dms.dynamo.api.port=443
-dms.dynamo.api.base-path=/sit
+dms.dynamo.api.base-path=/dev
 dms.dynamo.api.request-path=/jobs
 dms.dynamo.api.response-timeout=60000
 dms.dynamo.api.success-codes=200
@@ -418,10 +418,11 @@ dms.vwork.api.max-retries=3
 dms.vwork.api.millisec-between-retry=3000
 dms.vwork.api.millisec-call-wait=30000
 
-db.healthandsafety.database=test_health_and_safety
-db.healthandsafety.host=mule4-sit-rds.cduevppgfdr5.ap-southeast-2.rds.amazonaws.com
+db.healthandsafety.database=prod_health_and_safety
+db.healthandsafety.host=mule4-prod-rds.cj2wvnqwk61k.ap-southeast-2.rds.amazonaws.com
 db.healthandsafety.port=3306
 db.healthandsafety.username=mule4_hns
+
 
 ##########################################
 ## Store API details 
@@ -429,7 +430,7 @@ db.healthandsafety.username=mule4_hns
 commons.utils.referencestorecode.scope=STORE_REFERENCEDATA_READ
 
 commons.utils.referencestorecode.api.protocol=HTTPS
-commons.utils.referencestorecode.api.host=api-sit.omni.mitre10.co.nz
+commons.utils.referencestorecode.api.host=mule-prod.omni.mitre10.co.nz
 commons.utils.referencestorecode.api.port=443
 commons.utils.referencestorecode.api.basePath=/api
 commons.utils.referencestorecode.api.tokenPath=/token
@@ -448,7 +449,7 @@ sftp.eco.portal.port=22
 sftp.eco.portal.username=mitre10
 sftp.eco.portal.identity.file.name=eco_portal_sftp_k_y
 sftp.eco.portal.identity.file.path=${file.working.directory}/${sftp.eco.portal.identity.file.name}
-sftp.eco.portal.base.directory=/DEV/IN/sit
+sftp.eco.portal.base.directory=/PROD/IN
 
 mode.development=false
 # Run every day at 5am ( 4am DST , specified in UTC for Mule4 Cloudhub) 
@@ -468,28 +469,28 @@ support.centre.legal.entity.code=112
 #########################################
 # HRIS to Esker Integration Configuration
 hris.sqs.esker.send-event=false
-hris.sqs.esker.queue-name=mule4-hris-esker-users-test.fifo
+hris.sqs.esker.queue-name=mule4-hris-esker-users-prod.fifo
 hris.sqs.esker.queue-url=${aws.sqs.url-host}/${aws.account}/${hris.sqs.esker.queue-name}
 hris.sqs.esker.visibility.timeout=300
-hris.sqs.esker.dlq.queue-name=mule4-hris-esker-users-test-dlq.fifo
+hris.sqs.esker.dlq.queue-name=mule4-hris-esker-users-prod-dlq.fifo
 hris.sqs.esker.dlq.queue-url=${aws.sqs.url-host}/${aws.account}/${hris.sqs.esker.dlq.queue-name}
 hris.sqs.esker.dlq.visibility.timeout=300
 hris-esker.interfaceSystem=hris-esker
 hris-esker.sourceSystem=IntelliHR
 hris-esker.targetSystem=Esker
-common-alert.hris-esker.name=HRIS Test Esker Failure
+common-alert.hris-esker.name=HRIS Prod Esker Failure
 common-alert.hris-esker.id=
 common-alert.hris-esker.phone-number=
 common-alert.hris-esker.email=HRISSupport@Mitre10.co.nz
 # Esker SFTP Configuration
-esker.sftp.host=sftp-ae5.ondemand.esker.com
-esker.sftp.port=22
-esker.sftp.username=Users@05284907.20002586
+esker.sftp.host=
+esker.sftp.port=
+esker.sftp.username=
 esker.sftp.connection.timeout.seconds=30
 esker.sftp.response.timeout.seconds=30
 esker.sftp.reconnection.milliseconds=3000
 esker.sftp.reconnection.attempts=1
-esker.sftp.directory=In_Users
+esker.sftp.directory=
 esker.sftp.max-retry=5
 esker.sftp.frequency=10000
 # Esker Flow Configuration
@@ -502,28 +503,28 @@ esker.user-most-basic-profile.name=APSpecialist
 # HRIS to Pricer-Plaza Integration Configuration and SQS to update when available
 # Esker user SQS must be changed here and instead Pricer-Plaza user SQS must be used
 hris.sqs.pricer-plaza.send-event=false
-hris.sqs.pricer-plaza.queue-name=mule4-hris-pricer-plaza-test.fifo
+hris.sqs.pricer-plaza.queue-name=mule4-hris-pricer-plaza-prod.fifo
 hris.sqs.pricer-plaza.queue-url=${aws.sqs.url-host}/${aws.account}/${hris.sqs.pricer-plaza.queue-name}
 hris.sqs.pricer-plaza.visibility.timeout=300
-hris.sqs.pricer-plaza.dlq.queue-name=mule4-hris-pricer-plaza-dlq-test.fifo
+hris.sqs.pricer-plaza.dlq.queue-name=mule4-hris-pricer-plaza-dlq-prod.fifo
 hris.sqs.pricer-plaza.dlq.queue-url=${aws.sqs.url-host}/${aws.account}/${hris.sqs.pricer-plaza.dlq.queue-name}
 hris.sqs.pricer-plaza.dlq.visibility.timeout=300
 hris-pricer-plaza.interfaceSystem=hris-pricer-plaza
 hris-pricer-plaza.sourceSystem=IntelliHR
 hris-pricer-plaza.targetSystem=Pricer-Plaza
-common-alert.hris-pricer-plaza.name=HRIS Test Pricer-Plaza Failure
+common-alert.hris-pricer-plaza.name=HRIS Prod Pricer-Plaza Failure
 common-alert.hris-pricer-plaza.id=
 common-alert.hris-pricer-plaza.phone-number=
 common-alert.hris-pricer-plaza.email=HRISSupport@mitre10.co.nz
 
 sendgrid.baseUri=https://api.sendgrid.com/
-sendgrid.notification.peopletech.email=HRISSupport+Peopletech@mitre10.co.nz
-sendgrid.notification.reply-to.email=HRISSupport@mitre10.co.nz
-sendgrid.notification.reply-to.name=HRIS Support
-sendgrid.notification.from.email=HRISSupport@mitre10.co.nz
-sendgrid.notification.from.name=HRIS Support
-sendgrid.retry-max=2
-sendgrid.retry-interval=100000
+sendgrid.notification.peopletech.email=peopletech@mitre10.co.nz
+sendgrid.notification.reply-to.email=DoNotReplyPeopleTech@mitre10.co.nz
+sendgrid.notification.reply-to.name=PeopleTech Notifications
+sendgrid.notification.from.email=DoNotReplyPeopleTech@mitre10.co.nz
+sendgrid.notification.from.name=PeopleTech Notifications
+sendgrid.retry-max=3
+sendgrid.retry-interval=300000
 sendgrid.template.id.1001=d-9bc1c78cf52d48108b2dd86d49cf05ef
 sendgrid.template.id.1002=d-5359077f94b049b29d785a3bc7f48cf9
 sendgrid.template.id.1003=d-4579656968064d2ea385cf0eaa6db8c2

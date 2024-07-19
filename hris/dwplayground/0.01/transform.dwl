@@ -1141,6 +1141,13 @@ fun concat(value1: String, value2: String): String = value1 ++ value2
 fun concat(value1: Number, value2: Number): String = (value1 as String) ++ (value2 as String)
 fun concat(value1: Any, value2: Any): String = "Other types"
 
+var d1 = "2024-12-01T11:00:00+00:00"
+var d2 = "2024-04-07T12:00:00+00:00"
+var d3 = "2024-12-01T23:59:00+00:00"
+
+var sd = "2024-06-30T12:00:00+00:00"
+var ed = "2024-09-01T12:00:00+00:00"
+
 ---
 
 {

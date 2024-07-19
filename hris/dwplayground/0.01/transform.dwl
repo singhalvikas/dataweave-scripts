@@ -1137,9 +1137,103 @@ var plannedTerminationDate = calculateCompanyEndDate(getPlannedTerminationDate(p
 var allJobs: Array = getAllJobsFromEvent(vars.hrEvent default {})
 var locationType: String = getLocationType(vars.hrEvent.event.payload.job default {})
 
+fun concat(value1: String, value2: String): String = value1 ++ value2
+fun concat(value1: Number, value2: Number): String = (value1 as String) ++ (value2 as String)
+fun concat(value1: Any, value2: Any): String = "Other types"
+
 ---
 
 {
+    '<': '<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< d1 start',
+    d1_a0: 0,
+    d1_a1: 1,
+    d1_a2: 2,
+    d1_a3: 3,
+    d1_a4: 4,
+    d1_a5: 5,
+    d1_a6: 6,
+    d1_a7: 7,
+    d1_a8: 8,
+    d1_a9: 9,
+    d1_b0: 0,
+    d1_b1: 1,
+    d1_b2: 2,
+    d1_b3: 3,
+    d1_b4: 4,
+    d1_b5: 5,
+    d1_b6: 6,
+    d1_b7: 7,
+    d1_b8: 8,
+    d1_b9: 9,
+    '>': '>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>   d1 end',
+
+    '<': '<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< d2 start',
+    d2_a0: 0,
+    d2_a1: 1,
+    d2_a2: 2,
+    d2_a3: 3,
+    d2_a4: 4,
+    d2_a5: 5,
+    d2_a6: 6,
+    d2_a7: 7,
+    d2_a8: 8,
+    d2_a9: 9,
+    d2_b0: 0,
+    d2_b1: 1,
+    d2_b2: 2,
+    d2_b3: 3,
+    d2_b4: 4,
+    d2_b5: 5,
+    d2_b6: 6,
+    d2_b7: 7,
+    d2_b8: 8,
+    d2_b9: 9,
+    '>': '>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>   d2 end',
+
+    '-------': '------------------------------------------- d1',
+    a1: d1,
+    a2: d1 >> "NZ",
+    a2: d1 as DateTime >> "NZ",
+    a3: ((d1 as DateTime {mode: "SMART", format: 'uuuu-MM-dd\'T\'HH:mm:ssXXX'}) >> "NZ"),
+    '-------': '------------------------------------------- d2',
+    a1: d2,
+    a2: d2 >> "NZ",
+    a2: d2 as DateTime >> "NZ",
+    a3: ((d2 as DateTime {mode: "SMART", format: 'uuuu-MM-dd\'T\'HH:mm:ssXXX'}) >> "NZ"),
+    '-------': '------------------------------------------- d3',
+    a1: d3,
+    a2: d3 >> "NZ",
+    a2: d3 as DateTime >> "NZ",
+    a3: ((d3 as DateTime {mode: "SMART", format: 'uuuu-MM-dd\'T\'HH:mm:ssXXX'}) >> "NZ") as Date,
+    '-------': '------------------------------------------- sd',
+    a1: sd,
+    a2: sd >> "NZ",
+    a2: sd as DateTime >> "NZ",
+    a3: ((sd as DateTime {mode: "SMART", format: 'uuuu-MM-dd\'T\'HH:mm:ssXXX'}) >> "NZ"),
+    HF: "2024-07-01T00:00:00+12:00",
+    '-------': '------------------------------------------- ed',
+    a1: ed,
+    a2: ed >> "NZ",
+    a2: ed as DateTime >> "NZ",
+    a3: ((ed as DateTime {mode: "SMART", format: 'uuuu-MM-dd\'T\'HH:mm:ssXXX'}) >> "NZ"),
+    HF: "2024-09-02T00:00:00+12:00",
+    '-------': '------------------------------------------- >>',
+
+    strings: concat("Hello", " World!"), // Hello World!"
+    numbers: concat(20, 20), // "2020"
+    other: concat({},[]), // "Other types"
+    
+    /*
+    payload_message                 : payload.message,
+    queueName                       : "DLQ '[$queueName]'.",
+    'size of intellihr webhook'     : (if ('$intelliHrWebhooks' > 1) "There are '[$intelliHrWebhooks]' webhooks." else "There is '[$intelliHrWebhooks]' webhook."),
+    "p('A')"                        : p('A'),
+    'p("B")'                        : p("B"),
+    'p("C)'                         : p('C'),
+    'p(D")'                         : p('D'),
+    'p(An unrgistered random key)'  : p('An unrgistered random key'),
+    */
+    
     '___'                           :   '_________________________________________________',
     '---'                           :   '-------------------------------------------------',
     '==='                           :   '=================================================',
@@ -1165,4 +1259,18 @@ var locationType: String = getLocationType(vars.hrEvent.event.payload.job defaul
     ',,,'                           :   ',,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,',
     ';;;'                           :   ';;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;',
     ':::'                           :   ':::::::::::::::::::::::::::::::::::::::::::::::::',
+    
+    '-': '------------------------------------------------- d1 start',
+    '-': '-------------------------------------------------   d1 end',
+
+    '_': '_________________________________________________ d1 start',
+    '_': '_________________________________________________   d1 end',
+    '^': '^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^   d1 end',
+
+    '=': '================================================= d1 start',
+    '=': '=================================================   d1 end',
+
+    '<': '<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< d1 start',
+    '>': '>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>   d1 end',
+    
 }

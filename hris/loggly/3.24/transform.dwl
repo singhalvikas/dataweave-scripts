@@ -143,3 +143,17 @@ parr('Hris Api', ['"', ha, '"', c(), f(se_Hris_Api)])
 ++ "\n"
 ++ "\n\t'<': '<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< d1 start',"
 ++ "\n\t'>': '>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>   d1 end',"
+    
+++ "\n"
+++ "\n'form.completed'"
+++ "\n'person.updated'"
+++ "\n'job.created'"
+++ "\n'job.update_scheduled'"
+++ "\n'job.company_start_date_upcoming'"
+++ "\n'job.timeline_updated'"
+++ "\n'job.end_date_finalised'"
+++ "\n'job.ended'"
+++ "\n'job.end_date_adjusted'"
+++ "\n'job.end_date_cancelled'"
+++ "\n'job.end_date_finalised'"
+    

@@ -16,6 +16,19 @@ var ha                = 'envt-mitre10-hris-api'
 var m10c              = 'envt-m10-common-services'
 var se_Event_Search   = ' AND ("Received webhook event to process for intelliHR" OR "Started webhook event from intellihr event: " OR "environment HR Event is" OR "Completed webhook event from intellihr event: " OR "dynamic_template_data")'
 var se_Papi           = ' AND ("Received webhook event to process for intelliHR" OR "Completed webhook event from intellihr event: ")'
+var se_Papi_Webhooks_NotUsed = [
+"form.completed",
+"person.updated",
+"job.created",
+"job.update_scheduled",
+"job.company_start_date_upcoming",
+"job.timeline_updated",
+"job.end_date_finalised",
+"job.ended",
+"job.end_date_adjusted",
+"job.end_date_cancelled",
+"job.end_date_finalised",
+] map wrapWith($, "'") joinBy " OR "
 var se_Papi_Webhooks  = ' AND ("Received webhook event to process for intelliHR" AND ("form.completed" OR "person.updated" OR "job.created" OR "job.update_scheduled" OR "job.company_start_date_upcoming" OR "job.timeline_updated" OR "job.end_date_finalised" OR "job.ended" OR "job.end_date_adjusted" OR "job.end_date_cancelled" OR "job.end_date_finalised"))'
 var se_Azure_AD       = ' AND ("starting to process hr event for Azure AD" OR "completed hr event processing to Azure AD" OR "completed DLQ hr event processing to Azure AD")'
 var se_HF             = ' AND ("starting to process HR Event for Humanforce" OR "completed processing HR Event to Humanforce" OR "completed DLQ hr event processing to Humanforce")'

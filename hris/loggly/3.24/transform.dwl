@@ -2,6 +2,7 @@
 var jobUrl        = ''
 var employeeId    = 0
 var correlationId = ''
+var formDesignId = '82f8982f-e5d2-4f86-b7eb-81884eb480d8'
 var env           = 'production'    // env - starts with p or t (default p == production)
 var se            = 'yes'    // se == starts with y or n (default y == yes) - to add start and end strings from target system integration logs added in the end of loggly search string via footer function f(footer)
 //-------------------------------------------------------------------------------------------- Input End
@@ -15,6 +16,7 @@ var ha                = 'envt-mitre10-hris-api'
 var m10c              = 'envt-m10-common-services'
 var se_Event_Search   = ' AND ("Received webhook event to process for intelliHR" OR "Started webhook event from intellihr event: " OR "environment HR Event is" OR "Completed webhook event from intellihr event: " OR "dynamic_template_data")'
 var se_Papi           = ' AND ("Received webhook event to process for intelliHR" OR "Completed webhook event from intellihr event: ")'
+var se_Papi_Webhooks  = ' AND ("Received webhook event to process for intelliHR" AND ("form.completed" OR "person.updated" OR "job.created" OR "job.update_scheduled" OR "job.company_start_date_upcoming" OR "job.timeline_updated" OR "job.end_date_finalised" OR "job.ended" OR "job.end_date_adjusted" OR "job.end_date_cancelled" OR "job.end_date_finalised"))'
 var se_Azure_AD       = ' AND ("starting to process hr event for Azure AD" OR "completed hr event processing to Azure AD" OR "completed DLQ hr event processing to Azure AD")'
 var se_HF             = ' AND ("starting to process HR Event for Humanforce" OR "completed processing HR Event to Humanforce" OR "completed DLQ hr event processing to Humanforce")'
 var se_OnPrem_AD      = ' AND ("starting to process hr event for On Prem AD" OR "completed hr event processing to On Prem AD" OR "completed DLQ hr event processing to On Prem AD" OR "PowerShell script execution failure")'
@@ -29,14 +31,16 @@ var mode              = env as String default 'p'
 var envt              = if ( lower (mode) startsWith 'p') 'prod' else if ( lower (mode) startsWith 't') 'test' else 'prod'
 var personId          = substringBefore ( substringAfter ( job, 'intellihr.net/spa/people/' ), '/jobs/' )
 var jobId             = substringBefore ( substringAfter ( job, '/jobs/' ), '/' )
-var heading           = '    Loggly queries for:   '++ (if (lower(mode) startsWith 'p') 'Production' else if (lower(mode) startsWith 't') 'Test' else '') ++'\n========================================\n'++'     Person:  '++ personId ++'\n' ++ '        Job:  '++ jobId ++'\n'++'   Employee:  '++ empId ++'\n'++'Correlation:  '++ corrId ++'\n'
+var heading           = '    Loggly queries for:   '++ (if (lower(mode) startsWith 'p') 'Production' else if (lower(mode) startsWith 't') 'Test' else '') ++'\n========================================\n'++'     Person Id:  '++ personId ++'\n' ++ '        Job Id:  '++ jobId ++'\n' ++ 'Form Design Id:  '++ jobId ++'\n'++'   Employee Id:  '++ empId ++'\n'++'Correlation Id:  '++ corrId ++'\n'
 fun c()               = if(isBlank(corrId)) '' else (' AND "'++ corrId ++'"')
 fun p (arg1, arg2)    = '\n' ++ '   ' ++ arg1 ++ ':\n----------------------------------------\n' ++ (arg2 replace 'envt' with envt) ++ '\n'
 fun parr (arg1, arg2: Array<String>)    = '\n' ++ '>   ' ++ arg1 ++ ':\n----------------------------------------\n' ++ ((arg2 joinBy '') replace 'envt' with envt) ++ '\n'
-fun pje ()            = do { if ( isBlank (empId) or ( sizeOf (empId) < 2 )) ('"'++ personId ++'" OR "'++ jobId ++'"') else ('"'++ personId ++'" OR "'++ jobId ++'" OR "'++ empId ++'"') }
+fun pje ()            = do { if ( isBlank (empId) or ( sizeOf (empId) < 2 )) ('"'++ personId ++'" OR "'++ jobId ++'" OR "'++ formDesignId ++'"') else ('"'++ personId ++'" OR "'++ jobId ++'" OR "'++ formDesignId ++'" OR "'++ empId ++'"') }
 fun f(footer: String) = do {if (lower(se) startsWith 'n') '' else footer}
 ---
 heading ++
+
+parr('Event Search for Webhook', ['"', hp, '" AND (', pje(), ')', f(se_Papi_Webhooks)]) ++ 
 
 parr('Person or Job Event Search Started Completed to get Correlation ID', ['"', hp, '" AND (', pje(), ')', f(se_Papi)]) ++ 
 
